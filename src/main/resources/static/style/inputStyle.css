@@ -1,0 +1,10 @@
+.InputDefault{
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px gray;
+    padding: 8px;
+    padding-left: 25px;
+    color: black;
+}

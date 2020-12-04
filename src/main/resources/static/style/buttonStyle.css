@@ -1,0 +1,19 @@
+.DefaultButton{
+    width: 100%;
+    padding: 8px;
+    color: white;
+    background-image: linear-gradient(to right, hsl(259, 15%, 46%), rgb(203, 145, 212), hsl(259, 15%, 46%));
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    outline: none!important;
+    transition: 0.3s;
+}
+
+.DefaultButton:hover{
+    background-image: linear-gradient(to right, hsl(260, 37%, 22%), rgb(144, 82, 155), hsl(259, 39%, 21%));
+}
+
+.DefaultButton:active{
+    transform: scale(0.9);
+}

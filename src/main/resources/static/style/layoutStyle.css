@@ -1,0 +1,10 @@
+.SectionStyle{
+    background-color: #ececec !important;
+}
+
+.iconStyle{
+    position: absolute;
+    color: #6f6486 !important;
+    font-size: 25px;
+    bottom:5px;
+}
