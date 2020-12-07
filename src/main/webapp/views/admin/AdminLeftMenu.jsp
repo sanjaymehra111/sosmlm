@@ -22,18 +22,19 @@
 
       <li ><i class="fa fa-book fa-fw" aria-hidden="true"></i><a> Masters</a>
         <ul class="side-nav-dropdown">
-          <li><a href=''>News & Announcment</a></li>
+          <li><a href='AdminAnnouncement'>News & Announcment</a></li>
           <%-- <li><a href=''>File Manager</a></li> --%>
           <%-- <li><a href=''>Manage Bank</a></li> --%>
           <%-- <li><a href=''>Manage Account</a></li> --%>
           <%-- <li><a href=''>Manage Kit</a></li> --%>
-          <li><a href=''>Manage Country</a></li>
-          <li><a href=''>Manage State</a></li>
-          <li><a href=''>Manage District</a></li>
-          <li><a href=''>Manage City</a></li>
+          <li><a href='AdminManageLocation'>Manage Locations</a></li>
+          <%-- <li><a href='AdminManageCountry'>Manage Country</a></li>
+          <li><a href='AdminManageState'>Manage State</a></li>
+          <li><a href='AdminManageCity'>Manage City</a></li>
+          <li><a href='AdminManageDistrict'>Manage District</a></li> --%>
           <%-- <li><a href=''>Task Manager</a></li> --%>
-          <li><a href=''>Manage Banner</a></li>
-          <li><a href=''>Advertisement</a></li>
+          <li><a href='AdminManageBanner'>Manage Banner</a></li>
+          <li><a href='AdminManageAdvertisement'>Advertisement</a></li>
         </ul>
       </li>
       
@@ -51,13 +52,13 @@
 
       <li ><i class="fa fa-users fa-fw" aria-hidden="true"></i><a> Profile Manager</a>
         <ul class="side-nav-dropdown">
-          <li><a href=''>New Joining</a></li>
+          <li><a href='AdminJoinMember' target="_blank">New Joining</a></li>
           <li><a href=''>KYC Form</a></li>
-          <li><a href=''>Edit Profile</a></li>
-          <li><a href=''>View Profile</a></li>
-          <li><a href=''>KYC Pending</a></li>
-          <li><a href=''>Welcome Letter</a></li>
-          <li><a href=''>Block/Unblock</a></li>
+          <%-- <li><a href='AdminEditProfile'>Edit Profile</a></li> --%>
+          <li><a href='AdminViewProfile'>View Profile</a></li>
+          <%-- <li><a href=''>KYC Pending</a></li> --%>
+          <%-- <li><a href='AdminWelcomeLetter'>Welcome Letter</a></li> --%>
+          <%-- <li><a href=''>Block/Unblock</a></li> --%>
           <%-- <li><a href=''>Upgrade Member</a></li> --%>
         </ul>
       </li>

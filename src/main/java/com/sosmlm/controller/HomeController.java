@@ -31,5 +31,45 @@ public class HomeController {
         return "admin/AdminChangePassword";
     }
 
+    @GetMapping("AdminAnnouncement")
+    public String AdminAnnouncement() {
+        return "admin/AdminAnnouncement";
+    }
+
+    @GetMapping("AdminManageLocation")
+    public String AdminManageLocation() {
+        return "admin/AdminManageLocation";
+    }
+
+    @GetMapping("AdminManageBanner")
+    public String AdminManageBanner() {
+        return "admin/AdminManageBanner";
+    }
+
+    @GetMapping("AdminManageAdvertisement")
+    public String AdminManageAdvertisement() {
+        return "admin/AdminManageAdvertisement";
+    }
+
+    @GetMapping("AdminJoinMember")
+    public String AdminJoinMember() {
+        return "admin/AdminJoinMember";
+    }
+
+    @GetMapping("AdminViewProfile")
+    public String AdminViewProfile() {
+        return "admin/AdminViewProfile";
+    }
+
+    @GetMapping("AdminEditProfile")
+    public String AdminEditProfile() {
+        return "admin/AdminEditProfile";
+    }
+
+    @GetMapping("AdminWelcomeLetter")
+    public String AdminWelcomeLetter() {
+        return "admin/AdminWelcomeLetter";
+    }
+    
 
 }

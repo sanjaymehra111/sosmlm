@@ -12,6 +12,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<!--For Favicon Logo-->
+<link rel="shortcut icon" href="/images/sosmlm_fevicon.png">
+
 <!-- Embed Header CSS -->
 <link rel="stylesheet" href="/style/adminHeader.css">
 

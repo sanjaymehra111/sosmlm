@@ -12,6 +12,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<!--For Favicon Logo-->
+<link rel="shortcut icon" href="/images/sosmlm_fevicon.png">
+
 <!-- Embed Header CSS -->
 <link rel="stylesheet" href="/style/adminHeader.css">
 
@@ -87,15 +90,15 @@
 
                                             <div class="col-md-4"><br>
                                                 <div style="text-align:left; color:gray">Previous Password</div>
-                                                <input class="InputDefault" type="password" maxlength="100">
+                                                <input class="InputDefault" type="password" maxlength="100" placeholder="Previous Password">
                                             </div>
                                             <div class="col-md-4"><br>
                                                 <div style="text-align:left; color:gray">New Password</div>
-                                                <input class="InputDefault" type="password" maxlength="100">
+                                                <input class="InputDefault" type="password" maxlength="100" placeholder="New Password">
                                             </div>
                                             <div class="col-md-4"><br>
                                                 <div style="text-align:left; color:gray">Re-Password</div>
-                                                <input class="InputDefault" type="password" maxlength="100">
+                                                <input class="InputDefault" type="password" maxlength="100" placeholder="Re-Password">
                                             </div>
 
                                         </div>

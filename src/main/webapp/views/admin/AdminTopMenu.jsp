@@ -13,7 +13,6 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">&nbsp;&nbsp;&nbsp;&nbsp; Admin Menu <span class="caret"></span></a>
             
             <ul class="dropdown-menu" style="position: absolute; top:50px; background-color:#fff; color:black">
-              <!-- <li class="import_user" pagename="profile" textname="Profile"><a href="#"><i class="fa fa-user-o fw"></i> My Profile</a></li> -->
               <li><a href="AdminDashboard"><i class="fa fa-home"></i> Dashboard</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="AdminChangePassword"><i class="fa fa-lock fw"></i> Change Password</a></li>

@@ -12,6 +12,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!--For Favicon Logo-->
+    <link rel="shortcut icon" href="/images/sosmlm_fevicon.png">
+
     <!-- Embed Header CSS -->
     <link rel="stylesheet" href="/style/adminHeader.css">
 
@@ -449,7 +452,7 @@
                         </tr>
                     </thead>
 
-                    <tbody id="get_users_details"
+                    <tbody id="GetDetails"
                         style="font-size: 14px; border-collapse:separate; border-spacing:0 15px;">
                         <tr>
                             <td>01</td>
@@ -501,7 +504,7 @@
                         </tr>
                     </thead>
 
-                    <tbody id="get_users_details"
+                    <tbody id="GetDetails"
                         style="font-size: 14px; border-collapse:separate; border-spacing:0 15px;">
                         <tr>
                             <td>01</td>

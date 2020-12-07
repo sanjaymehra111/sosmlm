@@ -1,0 +1,43 @@
+.SectionStyle{
+    background-color: #ececec !important;
+}
+
+.iconStyle{
+    position: absolute;
+    color: #6f6486 !important;
+    font-size: 25px;
+    bottom:5px;
+}
+
+.ActionFontAwesome{
+    height: 30px;
+    width: 30px;
+    padding: 7.5px;
+    border-radius: 100px;
+    color: #ffffff !important;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.7;
+}
+
+.ActionFontAwesomeEdit{
+    background-color: rgb(85, 29, 107);
+}
+
+.ActionFontAwesomeDelete{
+    background-color: red;
+}
+
+.ActionFontAwesomeView{
+    background-color: rgb(68, 168, 152);
+}
+
+.ActionFontAwesome:hover{
+    box-shadow: 5px 5px 5px gray;
+    opacity: 1;
+}
+
+.ActionFontAwesome:active{
+    transform: scale(0.9);
+    box-shadow: 2px 2px 2px gray;
+}
