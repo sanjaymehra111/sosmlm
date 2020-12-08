@@ -45,13 +45,24 @@
 
 <style>
 
+.PrintImage {
+    width: 95px;
+    height: 95px;
+}
+
 @media print {
   #printSection, #hideSEction  {
     visibility: hidden;
   }
-  #section-to-print1, #section-to-print2, #section-to-print3 {
+  #section-to-print0, #section-to-print1, #section-to-print2, #section-to-print3 {
     visibility: visible;
   }
+
+    #section-to-print0 {
+        position:absolute;
+        top:20;
+        right:2%;
+    }
 
     #section-to-print1 {
         position:absolute;
@@ -117,7 +128,9 @@
 
                                         <div id="printSection" class="printSection" style='color:gray; text-align:left; text-align: justify;'>
 
-
+                                            <div align="right" style="float:right; margin-top:-20px" id="section-to-print0">
+                                                <img class="PrintImage" src="/images/adminicon2.png">
+                                            </div>
 
                                             <div align="center" id="section-to-print1">
                                                 <h3 style='color:black; font-weight:bold;  text-transform:uppercase'>Click Trade</h3>
@@ -369,7 +382,7 @@
 
                                     <div>
                                         <br>
-                                        <button class="DefaultButton PrintLetter" style="width:200px">Print</button>
+                                        <button class="DefaultButton PrintLetter" onclick="window.print()" style="width:200px">Print</button>
                                     </div>
 
                                     <div class="container-fluid"></div>
