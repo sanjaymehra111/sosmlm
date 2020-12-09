@@ -71,5 +71,19 @@ public class HomeController {
         return "admin/AdminWelcomeLetter";
     }
     
+    @GetMapping("AdminViewNetwork")
+    public String AdminViewNetwork() {
+        return "admin/AdminViewNetwork";
+    }
+
+    @GetMapping("AdminViewMatrix")
+    public String AdminViewMatrix() {
+        return "admin/AdminViewMatrix";
+    }
+
+    @GetMapping("AdminViewSponsor")
+    public String AdminViewSponsor() {
+        return "admin/AdminViewSponsor";
+    }
 
 }

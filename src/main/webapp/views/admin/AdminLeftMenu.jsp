@@ -65,12 +65,13 @@
       
       <li><i class="fa fa-server fa-fw"></i><a>Network Manager</a>
         <ul class="side-nav-dropdown">
+        <li><a href='AdminViewNetwork'>View Network</a></li>
           <%-- <li><a href=''>Matching Tree</a></li> --%>
-          <li><a href=''>Matrix Tree</a></li>
+          <%-- <li><a href=''>Matrix Tree</a></li> --%>
           <%-- <li><a href=''>Downline Purchase</a></li>
           <li><a href=''>DownLine List</a></li>
           <li><a href=''>Manage PV</a></li> --%>
-          <li><a href=''>Sponsor List</a></li>
+          <%-- <li><a href=''>Sponsor List</a></li> --%>
         </ul>
       </li>
 

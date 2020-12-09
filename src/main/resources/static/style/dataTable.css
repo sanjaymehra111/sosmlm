@@ -24,9 +24,9 @@
         display: none!important; 
     }
     
-    body {
-    background: #f7f7f7;
-    }
+    /* body {
+        background: #f7f7f7;
+    } */
     
     .table {
     border-spacing: 0 0.85rem !important;
