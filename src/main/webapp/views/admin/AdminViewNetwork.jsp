@@ -155,7 +155,7 @@ $("#example").wrap("<div class='service_provider_details' style='overflow:scroll
       <td>Delhi</td>
       <td style="text-align:center;">1234567897</td>
       <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 1px;">
+      <td style="text-align:center; min-width: 100px;">
         <a href='AdminViewMatrix' target='_blank'><i data-toggle="tooltip" title="Matrix Tree" class="fa fa-line-chart ActionFontAwesomeView ActionFontAwesome"></i></a>
         &nbsp;
         <a href='AdminViewSponsor' target='_blank'><i data-toggle="tooltip" title="Sponsors" class="fa fa-users ActionFontAwesomePage ActionFontAwesome"></i></a>
@@ -166,7 +166,7 @@ $("#example").wrap("<div class='service_provider_details' style='overflow:scroll
       <td>Delhi</td>
       <td style="text-align:center;">1234567897</td>
       <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 1px;">
+      <td style="text-align:center; min-width: 100px;">
         <a href='AdminViewMatrix' target='_blank'><i data-toggle="tooltip" title="Matrix Tree" class="fa fa-line-chart ActionFontAwesomeView ActionFontAwesome"></i></a>
         &nbsp;
         <a href='AdminViewSponsor' target='_blank'><i data-toggle="tooltip" title="Sponsors" class="fa fa-users ActionFontAwesomePage ActionFontAwesome"></i></a>
@@ -177,7 +177,7 @@ $("#example").wrap("<div class='service_provider_details' style='overflow:scroll
       <td>Delhi</td>
       <td style="text-align:center;">1234567897</td>
       <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 1px;">
+      <td style="text-align:center; min-width: 100px;">
         <a href='AdminViewMatrix' target='_blank'><i data-toggle="tooltip" title="Matrix Tree" class="fa fa-line-chart ActionFontAwesomeView ActionFontAwesome"></i></a>
         &nbsp;
         <a href='AdminViewSponsor' target='_blank'><i data-toggle="tooltip" title="Sponsors" class="fa fa-users ActionFontAwesomePage ActionFontAwesome"></i></a>
@@ -188,7 +188,7 @@ $("#example").wrap("<div class='service_provider_details' style='overflow:scroll
       <td>Delhi</td>
       <td style="text-align:center;">1234567897</td>
       <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 1px;">
+      <td style="text-align:center; min-width: 100px;">
         <a href='AdminViewMatrix' target='_blank'><i data-toggle="tooltip" title="Matrix Tree" class="fa fa-line-chart ActionFontAwesomeView ActionFontAwesome"></i></a>
         &nbsp;
         <a href='AdminViewSponsor' target='_blank'><i data-toggle="tooltip" title="Sponsors" class="fa fa-users ActionFontAwesomePage ActionFontAwesome"></i></a>
@@ -199,7 +199,7 @@ $("#example").wrap("<div class='service_provider_details' style='overflow:scroll
       <td>Delhi</td>
       <td style="text-align:center;">1234567897</td>
       <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 1px;">
+      <td style="text-align:center; min-width: 100px;">
         <a href='AdminViewMatrix' target='_blank'><i data-toggle="tooltip" title="Matrix Tree" class="fa fa-line-chart ActionFontAwesomeView ActionFontAwesome"></i></a>
         &nbsp;
         <a href='AdminViewSponsor' target='_blank'><i data-toggle="tooltip" title="Sponsors" class="fa fa-users ActionFontAwesomePage ActionFontAwesome"></i></a>
@@ -210,7 +210,7 @@ $("#example").wrap("<div class='service_provider_details' style='overflow:scroll
       <td>Delhi</td>
       <td style="text-align:center;">1234567897</td>
       <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 1px;">
+      <td style="text-align:center; min-width: 100px;">
         <a href='AdminViewMatrix' target='_blank'><i data-toggle="tooltip" title="Matrix Tree" class="fa fa-line-chart ActionFontAwesomeView ActionFontAwesome"></i></a>
         &nbsp;
         <a href='AdminViewSponsor' target='_blank'><i data-toggle="tooltip" title="Sponsors" class="fa fa-users ActionFontAwesomePage ActionFontAwesome"></i></a>
@@ -221,7 +221,7 @@ $("#example").wrap("<div class='service_provider_details' style='overflow:scroll
       <td>Delhi</td>
       <td style="text-align:center;">1234567897</td>
       <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 1px;">
+      <td style="text-align:center; min-width: 100px;">
         <a href='AdminViewMatrix' target='_blank'><i data-toggle="tooltip" title="Matrix Tree" class="fa fa-line-chart ActionFontAwesomeView ActionFontAwesome"></i></a>
         &nbsp;
         <a href='AdminViewSponsor' target='_blank'><i data-toggle="tooltip" title="Sponsors" class="fa fa-users ActionFontAwesomePage ActionFontAwesome"></i></a>

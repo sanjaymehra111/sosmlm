@@ -167,7 +167,7 @@ $("#example").wrap("<div class='service_provider_details' style='overflow:scroll
       <td>Delhi</td>
       <td style="text-align:center;">1234567897</td>
       <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 1px;">
+      <td style="text-align:center; min-width: 150px;">
         <a href='AdminTotalIncome' target='_blank'><i data-toggle="tooltip" title="Income" class="fa fa-money ActionFontAwesomeView ActionFontAwesome"></i></a>
         &nbsp;
         <a href='AdminTransactionHistory' target='_blank'><i data-toggle="tooltip" title="Histor" class="fa fa-history ActionFontAwesomePage ActionFontAwesome"></i></a>
@@ -180,7 +180,7 @@ $("#example").wrap("<div class='service_provider_details' style='overflow:scroll
       <td>Delhi</td>
       <td style="text-align:center;">1234567897</td>
       <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 1px;">
+      <td style="text-align:center; min-width: 150px;">
         <a href='AdminTotalIncome' target='_blank'><i data-toggle="tooltip" title="Income" class="fa fa-money ActionFontAwesomeView ActionFontAwesome"></i></a>
         &nbsp;
         <a href='AdminTransactionHistory' target='_blank'><i data-toggle="tooltip" title="Histor" class="fa fa-history ActionFontAwesomePage ActionFontAwesome"></i></a>
@@ -192,7 +192,7 @@ $("#example").wrap("<div class='service_provider_details' style='overflow:scroll
       <td>Delhi</td>
       <td style="text-align:center;">1234567897</td>
       <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 1px;">
+      <td style="text-align:center; min-width: 150px;">
         <a href='AdminTotalIncome' target='_blank'><i data-toggle="tooltip" title="Income" class="fa fa-money ActionFontAwesomeView ActionFontAwesome"></i></a>
         &nbsp;
         <a href='AdminTransactionHistory' target='_blank'><i data-toggle="tooltip" title="Histor" class="fa fa-history ActionFontAwesomePage ActionFontAwesome"></i></a>
@@ -204,7 +204,7 @@ $("#example").wrap("<div class='service_provider_details' style='overflow:scroll
       <td>Delhi</td>
       <td style="text-align:center;">1234567897</td>
       <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 1px;">
+      <td style="text-align:center; min-width: 150px;">
         <a href='AdminTotalIncome' target='_blank'><i data-toggle="tooltip" title="Income" class="fa fa-money ActionFontAwesomeView ActionFontAwesome"></i></a>
         &nbsp;
         <a href='AdminTransactionHistory' target='_blank'><i data-toggle="tooltip" title="Histor" class="fa fa-history ActionFontAwesomePage ActionFontAwesome"></i></a>
@@ -216,7 +216,7 @@ $("#example").wrap("<div class='service_provider_details' style='overflow:scroll
       <td>Delhi</td>
       <td style="text-align:center;">1234567897</td>
       <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 1px;">
+      <td style="text-align:center; min-width: 150px;">
         <a href='AdminTotalIncome' target='_blank'><i data-toggle="tooltip" title="Income" class="fa fa-money ActionFontAwesomeView ActionFontAwesome"></i></a>
         &nbsp;
         <a href='AdminTransactionHistory' target='_blank'><i data-toggle="tooltip" title="Histor" class="fa fa-history ActionFontAwesomePage ActionFontAwesome"></i></a>
@@ -228,7 +228,7 @@ $("#example").wrap("<div class='service_provider_details' style='overflow:scroll
       <td>Delhi</td>
       <td style="text-align:center;">1234567897</td>
       <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 1px;">
+      <td style="text-align:center; min-width: 150px;">
         <a href='AdminTotalIncome' target='_blank'><i data-toggle="tooltip" title="Income" class="fa fa-money ActionFontAwesomeView ActionFontAwesome"></i></a>
         &nbsp;
         <a href='AdminTransactionHistory' target='_blank'><i data-toggle="tooltip" title="Histor" class="fa fa-history ActionFontAwesomePage ActionFontAwesome"></i></a>
@@ -240,7 +240,7 @@ $("#example").wrap("<div class='service_provider_details' style='overflow:scroll
       <td>Delhi</td>
       <td style="text-align:center;">1234567897</td>
       <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 1px;">
+      <td style="text-align:center; min-width: 150px;">
         <a href='AdminTotalIncome' target='_blank'><i data-toggle="tooltip" title="Income" class="fa fa-money ActionFontAwesomeView ActionFontAwesome"></i></a>
         &nbsp;
         <a href='AdminTransactionHistory' target='_blank'><i data-toggle="tooltip" title="Histor" class="fa fa-history ActionFontAwesomePage ActionFontAwesome"></i></a>
@@ -252,7 +252,7 @@ $("#example").wrap("<div class='service_provider_details' style='overflow:scroll
       <td>Delhi</td>
       <td style="text-align:center;">1234567897</td>
       <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 1px;">
+      <td style="text-align:center; min-width: 150px;">
         <a href='AdminTotalIncome' target='_blank'><i data-toggle="tooltip" title="Income" class="fa fa-money ActionFontAwesomeView ActionFontAwesome"></i></a>
         &nbsp;
         <a href='AdminTransactionHistory' target='_blank'><i data-toggle="tooltip" title="Histor" class="fa fa-history ActionFontAwesomePage ActionFontAwesome"></i></a>

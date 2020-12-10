@@ -55,7 +55,7 @@
     left: 0;
     overflow: auto;
     transition: .3s;
-    z-index: 1;
+    z-index: 9!important;
     position: fixed;
     float: left;
   }
