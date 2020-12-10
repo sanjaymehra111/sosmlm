@@ -32,10 +32,8 @@
 
 
 <!-- For Matrix  -->
-<%-- <link rel="stylesheet" href="/style/MatrixTreeStyle.css"> --%>
-<%-- <script src="/script/MatrixTreeScript.js"></script> --%>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<%-- <link rel="stylesheet" href="/style/MatrixTreeStyle.css"> 
+<script src="/script/MatrixTreeScript.js"></script> --%>
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.8/themes/default/style.min.css" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.8/jstree.min.js"></script>
@@ -81,8 +79,9 @@ $(function () {
     var data = [
       {
           text: " node1",
+          id:'1',
           icon:'/images/user.png',
-          children: [{ text: " child1", icon:'/images/user.png', children: [{text: " child1-2", icon:'/images/user.png',}, {text: " child1-2", icon:'/images/user.png', children: [{text: " child1-2", icon:'/images/user.png',}, {text: " child1-2", icon:'/images/user.png', children: [{text: " child1-2", icon:'/images/user.png',}, {text: " child1-2", icon:'/images/user.png', children: [{text: " child1-2", icon:'/images/user.png',}, {text: " child1-2", icon:'/images/user.png',children: [{text: " child1-2", icon:'/images/user.png',}, {text: " child1-2", icon:'/images/user.png',children: [{text: " child1-2", icon:'/images/user.png',}, {text: " child1-2", icon:'/images/user.png',children: [{text: " child1-2", icon:'/images/user.png',}, {text: " child1-2", icon:'/images/user.png',}]}]}]}]}]}]}]  }, {text: " child2", icon:'/images/user.png'}]
+          children: [{ text: " child1", icon:'/images/user1.png', children: [{text: " child1-2", icon:'/images/user1.png',}, {text: " child1-2", icon:'/images/user1.png', children: [{text: " child1-2", icon:'/images/user1.png',}, {text: " child1-2", icon:'/images/user1.png', children: [{text: " child1-2", icon:'/images/user1.png',}, {text: " child1-2", icon:'/images/user1.png', children: [{text: " child1-2", icon:'/images/user1.png',}, {text: " child1-2", icon:'/images/user1.png',children: [{text: " child1-2", icon:'/images/user1.png',}, {text: " child1-2", icon:'/images/user1.png',children: [{text: " child1-2", icon:'/images/user1.png',}, {text: " child1-2", icon:'/images/user1.png',children: [{text: " child1-2", icon:'/images/user1.png',}, {text: " child1-2", icon:'/images/user1.png',}]}]}]}]}]}]}]  }, {text: " child2", icon:'/images/user1.png'}]
       }
     // {
     //     text: "node2",
@@ -132,7 +131,7 @@ $(function () {
     <div class="row">
     <div class="col-md-12">
     <div class="content" style="background-color:#d8d3d3!important; color:gray!important; padding:2px!important">
-    <h4> <i class="fa fa-university"></i> &nbsp; Distributor Details</h4>
+    <h4> <i class="fa fa-user"></i> &nbsp; Distributor Details</h4>
     </div>
     </div>
     </div>
@@ -176,7 +175,7 @@ $(function () {
     <div class="row">
     <div class="col-md-12">
     <div class="content" style="background-color:#d8d3d3!important; color:gray!important; padding:2px!important">
-    <h4> <i class="fa fa-university"></i> &nbsp; Distributor Details</h4>
+    <h4> <i class="fa fa-line-chart"></i> &nbsp; Distributor Matrix</h4>
     </div>
     </div>
     </div>

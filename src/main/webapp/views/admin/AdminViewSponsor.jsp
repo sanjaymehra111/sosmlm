@@ -2,7 +2,7 @@
 
 <head>
 
-<Title>View Profile</Title>
+<Title>User Sponsors</Title>
 
 <!-- Bootstrap -->
 <meta charset="utf-8">
@@ -41,8 +41,8 @@
 
 <style>
 .ql-toolbar{
-width:97%!important;
-background:white;
+    width:97%!important;
+    background:white;
 }
 .dataTables_info{
     color:black!important
@@ -54,37 +54,23 @@ background:white;
 .dataTables_filter input {
     width: 100%!important;
 }
-
-.KycSearch{
-    width:200px;
-    background:white;
-    color:black;
-    padding:7px;
-    position:absolute;
-    border-radius:5px;
-    border:solid 1px lightgray;
-    z-index:1!important;
-}
-
-@media(max-width:975px){
-    .KycSearch{
-        position:unset;
-        width:215px;
-    }   
-}
-    
+table>tbody>tr>td{
+  padding:5px!important;
+}    
 </style>
 
 <script>
 
 $(function () {
   $(".TopPageNamePre").html('User')
-  $(".TopPageNamePost").html("Profile")
+  $(".TopPageNamePost").html("Sponsors")
 
 
-  $(".AddAnnouncement").click(function(){
+  $(".AddAdvertisement").click(function(){
     alert('Updated');
   })
+
+
 
 $('#example thead tr').clone(true).appendTo( '#example thead' );
     $('#example thead tr:eq(1) th').each(  function (i) {
@@ -136,10 +122,6 @@ $(".dataTables_filter input")
 $("#example").wrap("<div class='service_provider_details' style='overflow:scroll'></div>");
 
 
-$(".KycSearch").on("change", function(){
-    table.columns(4).search(this.value).draw();   
-})
-
 })
 
 </script>
@@ -170,151 +152,193 @@ $(".KycSearch").on("change", function(){
 
 <div align="center">
 
+<div class="welcome">
+<div class="container-fluid">
+<div class="row">
+<div class="content"
+style="background-color:#d8d3d3!important; color:gray!important; padding:2px!important">
+<h4> <i class="fa fa-user"></i> &nbsp; Member Details</h4>
+</div>
+</div>
+</div>
+</div>
 
-<select class="KycSearch">
-    <option disabled selected>SELECT KYC TYPE</option>
-    <option value='panding'>PANDING</option>
-    <option value='approved'>APPROVED</option>
-    <option value=''>ALL</option>
-</select>
+
+    <div class="col-md-4"><br>
+    <div style="text-align:left; color:gray">User ID</div>
+    <input class="InputDefault" type="text" readonly>
+    </div>
+    <div class="col-md-4"><br>
+    <div style="text-align:left; color:gray">User Name</div>
+    <input class="InputDefault" type="text" readonly>
+    </div>
+    <div class="col-md-4"><br>
+    <div style="text-align:left; color:gray">Date Of Joining</div>
+    <input class="InputDefault" type="text" readonly>
+    </div>
+    <div class="col-md-4"><br>
+    <div style="text-align:left; color:gray">Designation</div>
+    <input class="InputDefault" type="text" readonly>
+    </div>
+    <div class="col-md-4"><br>
+    <div style="text-align:left; color:gray">Sponsor User ID</div>
+    <input class="InputDefault" type="text" readonly>
+    </div>
+    <div class="col-md-4"><br>
+    <div style="text-align:left; color:gray">Sponsor User Name</div>
+    <input class="InputDefault" type="text" readonly>
+    </div>
+
+
+
+
+<div class="container-fluid"></div>
+
+<br> 
+
+<div class="welcome">
+<div class="container-fluid">
+<div class="row">
+<div class="content" style="background-color:#d8d3d3!important; color:gray!important; padding:2px!important">
+<h4> <i class="fa fa-users"></i> &nbsp; Sponsors List</h4>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+<br>
+
 <table id="example" class="table table-hover responsive nowrap" style="width:100%; border:solid 1px lightgray" cellspacing="10">
 
 <thead>
   <tr style="color: white; background-color: #6f6486;">
       <th>ID</th>
       <th>Name</th>
-      <th style="text-align:center;">Contact</th>
-      <th style="text-align:center;">Registered</th>
-      <th style="text-align:center;">KYC</th>
-      <th style="text-align:center">Option</th>
+      <th>Package (Rs)</th>
+      <th style="text-align:center">Total Member</th>
+      <th style="text-align:center">Contact</th>
+      <th style="text-align:center">Registered</th>
+      <th style="text-align:center">Status</th>
   </tr>
 </thead>
 
 <tbody id="GetDetails"
   style="font-size: 14px; border-collapse:separate; border-spacing:0 15px;">
   <tr>
-      <td>India</td>
-      <td>Delhi</td>
-      <td style="text-align:center;">1234567897</td>
+      <td>987</td>
+      <td>karan</td>
+      <td style="min-width: 140px;">Package 01 - 98000</td>
+      <td style="text-align:center;">4</td>
+      <td style="text-align:center;">9883838383</td>
       <td style="text-align:center;">10/12/2020</td>
       <td style="text-align:center; min-width: 102px;">
-        <span class="KycStatus" style="display:none">approved</span>
-        <i data-toggle="tooltip" title="Approved" class="fa fa-check ActionFontAwesomeCheck ActionFontAwesome"></i>
-      </td>
-      <td style="text-align:center; min-width: 1px;">
-        <a href='AdminEditProfile' target='_blank'><i data-toggle="tooltip" title="View / Edit" class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i></a>
-        &nbsp;
-        <a href='AdminWelcomeLetter' target='_blank'><i data-toggle="tooltip" title="Welcome Letter" class="fa fa-file-text ActionFontAwesomePage ActionFontAwesome"></i></a>
-        &nbsp;
-        <i data-toggle="tooltip" title="Block" class="fa fa-ban ActionFontAwesomeDelete ActionFontAwesome"></i>
+        <i data-toggle="tooltip" title="Active" class="fa fa-check ActionFontAwesomeCheck ActionFontAwesome"></i> 
       </td>
   </tr>
-  <tr>
-      <td>India</td>
-      <td>Delhi</td>
-      <td style="text-align:center;">1234567897</td>
+    <tr>
+      <td>123</td>
+      <td>karan</td>
+      <td style="min-width: 140px;">Package 01 - 98000</td>
+      <td style="text-align:center;">4</td>
+      <td style="text-align:center;">9883838383</td>
       <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center;">
-        <span class="KycStatus" style="display:none">approved</span>
-        <i data-toggle="tooltip" title="Approved" class="fa fa-check ActionFontAwesomeCheck ActionFontAwesome"></i>
-      </td>
-      <td style="text-align:center; min-width: 150px;">
-        <a href='AdminEditProfile' target='_blank'><i data-toggle="tooltip" title="View / Edit" class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i></a>
-        &nbsp;
-        <a href='AdminWelcomeLetter' target='_blank'><i data-toggle="tooltip" title="Welcome Letter" class="fa fa-file-text ActionFontAwesomePage ActionFontAwesome"></i></a>
-        &nbsp;
-        <i data-toggle="tooltip" title="Block" class="fa fa-ban ActionFontAwesomeDelete ActionFontAwesome"></i>
+      <td style="text-align:center; min-width: 102px;">
+        <i data-toggle="tooltip" title="Deactive" class="fa fa-times ActionFontAwesomeDelete ActionFontAwesome"></i> 
       </td>
   </tr>
+
   <tr>
-      <td>India</td>
-      <td>Delhi</td>
-      <td style="text-align:center;">1234567897</td>
+      <td>123</td>
+      <td>karan</td>
+      <td style="min-width: 140px;">Package 01 - 98000</td>
+      <td style="text-align:center;">4</td>
+      <td style="text-align:center;">9883838383</td>
       <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center;">
-        <span class="KycStatus" style="display:none">panding</span>
-        <i data-toggle="tooltip" title="Panding" class="fa fa-circle ActionFontAwesomeDelete ActionFontAwesome"></i>
-      </td>
-      <td style="text-align:center; min-width: 150px;">
-        <a href='AdminEditProfile' target='_blank'><i data-toggle="tooltip" title="View / Edit" class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i></a>
-        &nbsp;
-        <a href='AdminWelcomeLetter' target='_blank'><i data-toggle="tooltip" title="Welcome Letter" class="fa fa-file-text ActionFontAwesomePage ActionFontAwesome"></i></a>
-        &nbsp;
-        <i data-toggle="tooltip" title="Unblock"class="fa fa-check-circle ActionFontAwesomeCheck ActionFontAwesome"></i>
+      <td style="text-align:center; min-width: 102px;">
+        <i data-toggle="tooltip" title="Active" class="fa fa-check ActionFontAwesomeCheck ActionFontAwesome"></i> 
       </td>
   </tr>
+
   <tr>
-      <td>India</td>
-      <td>Delhi</td>
-      <td style="text-align:center;">1234567897</td>
+      <td>123</td>
+      <td>karan</td>
+      <td style="min-width: 140px;">Package 01 - 98000</td>
+      <td style="text-align:center;">4</td>
+      <td style="text-align:center;">9883838383</td>
       <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center;">
-        <span class="KycStatus" style="display:none">panding</span>
-        <i data-toggle="tooltip" title="Panding" class="fa fa-circle ActionFontAwesomeDelete ActionFontAwesome"></i>
-      </td>
-      <td style="text-align:center; min-width: 150px;">
-        <a href='AdminEditProfile' target='_blank'><i data-toggle="tooltip" title="View / Edit" class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i></a>
-        &nbsp;
-        <a href='AdminWelcomeLetter' target='_blank'><i data-toggle="tooltip" title="Welcome Letter" class="fa fa-file-text ActionFontAwesomePage ActionFontAwesome"></i></a>
-        &nbsp;
-        <i data-toggle="tooltip" title="Unblock"class="fa fa-check-circle ActionFontAwesomeCheck ActionFontAwesome"></i>
+      <td style="text-align:center; min-width: 102px;">
+        <i data-toggle="tooltip" title="Deactive" class="fa fa-times ActionFontAwesomeDelete ActionFontAwesome"></i> 
       </td>
   </tr>
+
   <tr>
-      <td>India</td>
-      <td>Delhi</td>
-      <td style="text-align:center;">1234567897</td>
+      <td>123</td>
+      <td>karan</td>
+      <td style="min-width: 140px;">Package 01 - 98000</td>
+      <td style="text-align:center;">4</td>
+      <td style="text-align:center;">9883838383</td>
       <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center;">
-        <span class="KycStatus" style="display:none">approved</span>
-        <i data-toggle="tooltip" title="Approved" class="fa fa-check ActionFontAwesomeCheck ActionFontAwesome"></i>
-      </td>
-      <td style="text-align:center; min-width:150px;">
-        <a href='AdminEditProfile' target='_blank'><i data-toggle="tooltip" title="View / Edit" class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i></a>
-        &nbsp;
-        <a href='AdminWelcomeLetter' target='_blank'><i data-toggle="tooltip" title="Welcome Letter" class="fa fa-file-text ActionFontAwesomePage ActionFontAwesome"></i></a>
-        &nbsp;
-        <i data-toggle="tooltip" title="Block" class="fa fa-ban ActionFontAwesomeDelete ActionFontAwesome"></i>
+      <td style="text-align:center; min-width: 102px;">
+        <i data-toggle="tooltip" title="Active" class="fa fa-check ActionFontAwesomeCheck ActionFontAwesome"></i> 
       </td>
   </tr>
+
   <tr>
-      <td>India</td>
-      <td>Delhi</td>
-      <td style="text-align:center;">1234567897</td>
+      <td>123</td>
+      <td>karan</td>
+      <td style="min-width: 140px;">Package 01 - 98000</td>
+      <td style="text-align:center;">4</td>
+      <td style="text-align:center;">9883838383</td>
       <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center;">
-        <span class="KycStatus" style="display:none">approved</span>
-        <i data-toggle="tooltip" title="Approved" class="fa fa-check ActionFontAwesomeCheck ActionFontAwesome"></i>
-      </td>
-      <td style="text-align:center; min-width: 150px;">
-        <a href='AdminEditProfile' target='_blank'><i data-toggle="tooltip" title="View / Edit" class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i></a>
-        &nbsp;
-        <a href='AdminWelcomeLetter' target='_blank'><i data-toggle="tooltip" title="Welcome Letter" class="fa fa-file-text ActionFontAwesomePage ActionFontAwesome"></i></a>
-        &nbsp;
-        <i data-toggle="tooltip" title="Block" class="fa fa-ban ActionFontAwesomeDelete ActionFontAwesome"></i>
+      <td style="text-align:center; min-width: 102px;">
+        <i data-toggle="tooltip" title="Active" class="fa fa-check ActionFontAwesomeCheck ActionFontAwesome"></i> 
       </td>
   </tr>
+
   <tr>
-      <td>India</td>
-      <td>Delhi</td>
-      <td style="text-align:center;">1234567897</td>
+      <td>123</td>
+      <td>karan</td>
+      <td style="min-width: 140px;">Package 01 - 98000</td>
+      <td style="text-align:center;">4</td>
+      <td style="text-align:center;">9883838383</td>
       <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center;">
-        <span class="KycStatus" style="display:none">approved</span>
-        <i data-toggle="tooltip" title="Approved" class="fa fa-check ActionFontAwesomeCheck ActionFontAwesome"></i>
-      </td>
-      <td style="text-align:center; min-width:150px;">
-        <a href='AdminEditProfile' target='_blank'><i data-toggle="tooltip" title="View / Edit" class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i></a>
-        &nbsp;
-        <a href='AdminWelcomeLetter' target='_blank'><i data-toggle="tooltip" title="Welcome Letter" class="fa fa-file-text ActionFontAwesomePage ActionFontAwesome"></i></a>
-        &nbsp;
-        <i data-toggle="tooltip" title="Block" class="fa fa-ban ActionFontAwesomeDelete ActionFontAwesome"></i>
+      <td style="text-align:center; min-width: 102px;">
+        <i data-toggle="tooltip" title="Active" class="fa fa-check ActionFontAwesomeCheck ActionFontAwesome"></i> 
       </td>
   </tr>
+
+  <tr>
+      <td>123</td>
+      <td>karan</td>
+      <td style="min-width: 140px;">Package 01 - 98000</td>
+      <td style="text-align:center;">4</td>
+      <td style="text-align:center;">9883838383</td>
+      <td style="text-align:center;">10/12/2020</td>
+      <td style="text-align:center; min-width: 102px;">
+        <i data-toggle="tooltip" title="Deactive" class="fa fa-times ActionFontAwesomeDelete ActionFontAwesome"></i> 
+      </td>
+  </tr>
+
+  <tr>
+      <td>123</td>
+      <td>karan</td>
+      <td style="min-width: 140px;">Package 01 - 98000</td>
+      <td style="text-align:center;">4</td>
+      <td style="text-align:center;">9883838383</td>
+      <td style="text-align:center;">10/12/2020</td>
+      <td style="text-align:center; min-width: 102px;">
+        <i data-toggle="tooltip" title="Deactive" class="fa fa-times ActionFontAwesomeDelete ActionFontAwesome"></i> 
+      </td>
+  </tr>
+
 
 </tbody>
 
-</table>    
+</table>
 
 
 </div>

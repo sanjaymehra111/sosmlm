@@ -86,4 +86,46 @@ public class HomeController {
         return "admin/AdminViewSponsor";
     }
 
+    @GetMapping("AdminPayoutRequest")
+    public String AdminPayoutRequest() {
+        return "admin/AdminPayoutRequest";
+    }
+
+    @GetMapping("AdminCurrencyWallet")
+    public String AdminCurrencyWallet() {
+        return "admin/AdminCurrencyWallet";
+    }
+
+    @GetMapping("AdminTotalIncome")
+    public String AdminTotalIncome() {
+        return "admin/AdminTotalIncome";
+    }
+
+    @GetMapping("AdminTransactionHistory")
+    public String AdminTransactionHistory() {
+        return "admin/AdminTransactionHistory";
+    }
+
+    @GetMapping("AdminTransfer")
+    public String AdminTransfer() {
+        return "admin/AdminTransfer";
+    }
+
+    @GetMapping("AdminMailInbox")
+    public String AdminMailInbox() {
+        return "admin/AdminMailInbox";
+    }
+
+    @GetMapping("AdminComposeMail")
+    public String AdminComposeMail() {
+        return "admin/AdminComposeMail";
+    }
+
+    @GetMapping("AdminSentMail")
+    public String AdminSentMail() {
+        return "admin/AdminSentMail";
+    }
+
+
+
 }

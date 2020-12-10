@@ -233,7 +233,7 @@
     
     .table>tbody>tr>td
     {
-    padding: 15px;
+    padding: 8px;
     min-width: 50px;
     }
     .row
@@ -326,4 +326,3 @@
     }
     
     }
-    

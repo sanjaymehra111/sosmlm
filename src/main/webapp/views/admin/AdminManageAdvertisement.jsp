@@ -41,8 +41,8 @@
 
 <style>
 .ql-toolbar{
-width:97%!important;
-background:white;
+    width:97%!important;
+    background:white;
 }
 .dataTables_info{
     color:black!important
@@ -64,7 +64,7 @@ $(function () {
   $(".TopPageNamePost").html("Advertisement")
 
 
-  $(".AddAnnouncement").click(function(){
+  $(".AddAdvertisement").click(function(){
     alert('Updated');
   })
 
@@ -191,7 +191,7 @@ style="background-color:#d8d3d3!important; color:gray!important; padding:2px!imp
 
 <div align="center">
 <br><br>
-<button class="DefaultButton AddAnnouncement" style="width:200px">Update</button>
+<button class="DefaultButton AddAdvertisement" style="width:200px">Update</button>
 </div>
 
 <br> 

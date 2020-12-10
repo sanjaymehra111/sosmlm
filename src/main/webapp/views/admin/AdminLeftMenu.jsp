@@ -53,7 +53,7 @@
       <li ><i class="fa fa-users fa-fw" aria-hidden="true"></i><a> Profile Manager</a>
         <ul class="side-nav-dropdown">
           <li><a href='AdminJoinMember' target="_blank">New Joining</a></li>
-          <li><a href=''>KYC Form</a></li>
+          <%-- <li><a href=''>KYC Form</a></li> --%>
           <%-- <li><a href='AdminEditProfile'>Edit Profile</a></li> --%>
           <li><a href='AdminViewProfile'>View Profile</a></li>
           <%-- <li><a href=''>KYC Pending</a></li> --%>
@@ -79,7 +79,7 @@
         <ul class="side-nav-dropdown">
           <%-- <li><a href=''>Deposit in Account</a></li>
           <li><a href=''>Deduct from Account</a></li> --%>
-          <li><a href=''>Payout Request</a></li>        
+          <li><a href='AdminPayoutRequest'>Payout Request</a></li>        
         </ul>
       </li>
 
@@ -91,7 +91,7 @@
       </li> --%>
 
 
-      <li><i class="fa fa-user-circle fa-fw"></i><a> Incentive Account</a>
+      <%-- <li><i class="fa fa-user-circle fa-fw"></i><a> Incentive Account</a>
         <ul class="side-nav-dropdown">
           <li><a href=''>Payout Wise</a></li>
           <li><a href=''>Member Wise</a></li>
@@ -99,30 +99,31 @@
           <li><a href=''> Payout Requested</a></li>
           <li><a href=''>Ewallet Status</a></li>
         </ul>
-      </li>
+      </li> --%>
 
 
       <li><i class="fa fa-credit-card fa-fw"></i><a> Currency Wallet</a>
         <ul class="side-nav-dropdown">
-          <li><a href=''>Total Income</a></li>
+          <li><a href='AdminCurrencyWallet'>Wallet History</a></li>
+          <%-- <li><a href=''>Total Income</a></li>
           <li><a href=''>Transaction History</a></li>
-          <li><a href=''>Transfer</a></li>
+          <li><a href=''>Transfer</a></li> --%>
         </ul>
       </li>
 
 
       <li><i class="fa fa-search fa-fw"></i><a> Member Search</a>
         <ul class="side-nav-dropdown">
-          <li><a href=''>Search</a></li>
+          <li><a href='AdminViewProfile'>Search</a></li>
         </ul>
       </li>
 
 
       <li><i class="fa fa-envelope fa-fw"></i><a> Message Center</a>
         <ul class="side-nav-dropdown">
-          <li><a href=''>Inbox</a></li>
-          <li><a href=''>Compose Mail</a></li>
-          <li><a href=''>Sent Mail</a></li>
+          <%-- <li><a href='AdminMailInbox'>Inbox</a></li> --%>
+          <li><a href='AdminComposeMail'>Compose Mail</a></li>
+          <li><a href='AdminSentMail'>Sent Mail</a></li>
         </ul>
       </li>
 
