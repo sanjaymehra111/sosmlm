@@ -3,10 +3,21 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-**/*.jpg
-!**/src/main/resources/static/images/*.jpg
-**/*.png
-!**/src/main/resources/static/images/*.png
+
+# JPEG
+*.jpg
+*.jpeg
+*.jpe
+*.jif
+*.jfif
+*.jfi
+
+# Web P
+*.webp
+
+# Portable Network Graphics
+*.png
+
 ### STS ###
 .apt_generated
 .classpath

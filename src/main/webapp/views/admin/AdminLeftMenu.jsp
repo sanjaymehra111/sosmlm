@@ -122,8 +122,10 @@
       <li><i class="fa fa-envelope fa-fw"></i><a> Message Center</a>
         <ul class="side-nav-dropdown">
           <%-- <li><a href='AdminMailInbox'>Inbox</a></li> --%>
-          <li><a href='AdminComposeMail'>Compose Mail</a></li>
-          <li><a href='AdminSentMail'>Sent Mail</a></li>
+          <li><a href=''>Compose Mail</a></li>
+          <li><a href=''>Sent Mail</a></li>
+          <%-- <li><a href='AdminComposeMail'>Compose Mail</a></li>
+          <li><a href='AdminSentMail'>Sent Mail</a></li> --%>
         </ul>
       </li>
 
