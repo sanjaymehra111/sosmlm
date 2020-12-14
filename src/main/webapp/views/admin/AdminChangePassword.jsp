@@ -17,17 +17,12 @@
 
 <!-- Embed Header CSS -->
 <link rel="stylesheet" href="/style/adminHeader.css">
-
-<!-- Embed Button CSS -->
 <link rel="stylesheet" href="/style/buttonStyle.css">
-
-<!-- Embed Input CSS -->
 <link rel="stylesheet" href="/style/inputStyle.css">
-
-<!-- Embed Layout CSS -->
 <link rel="stylesheet" href="/style/layoutStyle.css">
 
 <!-- Embed Header Script -->
+<script src="/script/ValidationScript.js"></script>
 <script src="/script/adminHeader.js"></script>
 
 
@@ -37,11 +32,38 @@
         $(".TopPageNamePre").html('Change');
         $(".TopPageNamePost").html('Password');
 
-        $(".changePassword").click(function(){
-            alert('Updated');
-        })
+        $(".ValidInputField").on("keyup", function(event){
+            if(event.which == 13)
+                ChangePasswordFunction();
+        })// Press Enter
 
     })
+
+
+     function ChangePasswordFunction(){
+        
+        var oldPwd = $(".OldPassword").val();
+        var newPwd = $(".NewPassword").val();
+        var newRePwd = $(".NewRePassword").val();
+
+        var returns = ValidateInputField();
+        
+        if(returns){
+            if (oldPwd == newPwd){
+                $(".NewPassword").focus();
+                 $(".NewPassword, .OldPassword").addClass("InputFieldError");
+            }
+            else if (newPwd != newRePwd){
+                $(".NewPassword").focus();
+                 $(".NewPassword, .NewRePassword").addClass("InputFieldError");
+            }
+            else{
+                $(".InputFieldError").removeClass("InputFieldError");
+                alert("Success", 'suc')
+            }
+        }
+    }; // SubmitFunction Close 
+
 
 </script>
 
@@ -90,15 +112,15 @@
 
                                             <div class="col-md-4"><br>
                                                 <div style="text-align:left; color:gray">Previous Password</div>
-                                                <input class="InputDefault" type="password" maxlength="100" placeholder="Previous Password">
+                                                <input class="InputDefault ValidInputField NoSpaceField OldPassword" type="password" maxlength="100" placeholder="Previous Password">
                                             </div>
                                             <div class="col-md-4"><br>
                                                 <div style="text-align:left; color:gray">New Password</div>
-                                                <input class="InputDefault" type="password" maxlength="100" placeholder="New Password">
+                                                <input class="InputDefault ValidInputField NoSpaceField NewPassword" type="password" maxlength="100" placeholder="New Password">
                                             </div>
                                             <div class="col-md-4"><br>
                                                 <div style="text-align:left; color:gray">Re-Password</div>
-                                                <input class="InputDefault" type="password" maxlength="100" placeholder="Re-Password">
+                                                <input class="InputDefault ValidInputField NoSpaceField NewRePassword" type="password" maxlength="100" placeholder="Re-Password">
                                             </div>
 
                                         </div>
@@ -110,7 +132,7 @@
 
                                     <div>
                                         <br><br>
-                                        <button class="DefaultButton changePassword" style="width:200px">Update</button>
+                                        <button class="DefaultButton changePassword" onclick="ChangePasswordFunction()" style="width:200px">Update</button>
                                     </div>
 
                                     <div class="container-fluid"></div>

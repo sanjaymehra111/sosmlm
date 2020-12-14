@@ -17,19 +17,20 @@
 
 <!-- Embed Header CSS -->
 <link rel="stylesheet" href="/style/adminHeader.css">
-
-<!-- Embed Button CSS -->
 <link rel="stylesheet" href="/style/buttonStyle.css">
-
-<!-- Embed Input CSS -->
 <link rel="stylesheet" href="/style/inputStyle.css">
-
-<!-- Embed Layout CSS -->
 <link rel="stylesheet" href="/style/layoutStyle.css">
 
 <!-- Embed Header Script -->
 <script src="/script/adminHeader.js"></script>
+<script src="/script/ValidationScript.js"></script>
 
+<style>
+.InputDefault{
+    text-align:left;
+    padding:10px;
+}
+</style>
 
 <script>
 
@@ -57,11 +58,45 @@
             }
         }
 
-        $(".UpdateProfile").click(function(){
-            alert('Updated');
-        })
+        $(".ValidInputField").on("keyup", function(event){
+            if(event.which == 13)
+                SubmitFunction();
+        })// Press Enter
 
     })
+
+    function SubmitFunction(){
+
+
+        var UserEmail = $(".UserEmail").val();
+        var UserHostEmail = $(".UserHostEmail").val();
+        var UserSenderEmail = $(".UserSenderEmail").val();
+        var UserSenderPassword = $(".UserSenderPassword").val();
+        var UserCompanyName = $(".UserCompanyName").val();
+        var UserCompanyCode = $(".UserCompanyCode").val();
+        var UserCompanyAddress = $(".UserCompanyAddress").val();
+        var UserCompanyCity = $(".UserCompanyCity").val();
+        var UserCompanyState = $(".UserCompanyState").val();
+        var UserCompanyCountry = $(".UserCompanyCountry").val();
+        var UserCompanyPhone = $(".UserCompanyPhone").val();
+        var UserProfile = $(".selectImage")[0].files;
+
+        //************* Add Multiple image Data To Ajax ********//
+
+        // for(var i =0; i<img.length; i++){
+		// 	data.append("file",$(".image_button")[0].files[i]);
+		// }
+
+        var returns = ValidateInputField();
+        if(returns){
+            if(UserCompanyPhone.length != 10)
+                $(".UserCompanyPhone").addClass("InputFieldError");
+            else{
+                $(".InputFieldError").removeClass("InputFieldError");
+                alert("Updated", 'suc')
+            }
+        }
+    }; // SubmitFunction Close 
 
 </script>
 
@@ -129,15 +164,17 @@
 
                                         <div style="margin-top:25px">
                                             <div class="col-md-3"><br>
-                                                <i class="fa fa-user iconStyle"></i> <input class="InputDefault" type="text" value="Karan" maxlength="50" disabled style="cursor:not-allowed">
+                                                <div style="text-align:left; color:gray">Name</div>
+                                                <input class="InputDefault" type="text" placeholder="User Name" maxlength="50" disabled style="cursor:not-allowed">
                                             </div>
                                             <div class="col-md-3"><br>
-                                                <i class="fa fa-phone iconStyle"></i> <input class="InputDefault" type="number" value="8447474747" maxlength="10" disabled style="cursor:not-allowed">
+                                                <div style="text-align:left; color:gray">Contatc</div>
+                                                <input class="InputDefault" type="number" placeholder="Contact" maxlength="10" disabled style="cursor:not-allowed">
                                             </div>
                                             <div class="col-md-3"><br>
-                                                <i class="fa fa-envelope iconStyle"></i> <input class="InputDefault" type="t  ext" value="karan@gmail.com" maxlength="100">
+                                                <div style="text-align:left; color:gray">Email</div>
+                                                <input class="InputDefault ValidInputField UserEmail" type="text" placeholder="Email" maxlength="100">
                                             </div>
-
                                         </div>
                                         <div class="container-fluid"></div>
                                         <br>
@@ -160,29 +197,29 @@
 
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">Host Email</div>
-                                            <input class="InputDefault" type="text" value="karan@gmail.com" maxlength="100">
+                                            <input class="InputDefault ValidInputField UserHostEmail" type="text" placeholder="Host Email"  maxlength="100">
                                         </div>
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">Sender Email</div>
-                                            <input class="InputDefault" type="text" value="karan@gmail.com" maxlength="100">
+                                            <input class="InputDefault ValidInputField UserSenderEmail" type="text" placeholder="Sender Email" maxlength="100">
                                         </div>
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">Sender Password</div>
-                                            <input class="InputDefault" type="password" value="karan" maxlength="100">
+                                            <input class="InputDefault ValidInputField UserSenderPassword" type="password" placeholder="Sender Password" maxlength="100">
                                         </div>
 
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">Company Name</div>
-                                            <input class="InputDefault" type="text" value="Click Trade" maxlength="100">
+                                            <input class="InputDefault ValidInputField UserCompanyName" type="text" placeholder="Compant Name" maxlength="100">
                                         </div>
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">Company Code</div>
-                                            <input class="InputDefault" type="text" value="Click Trade" maxlength="100">
+                                            <input class="InputDefault ValidInputField UserCompanyCode" type="text" placeholder="Company Code" maxlength="100">
                                         </div>
                                         
                                         <%-- <div class="col-md-4"><br>
                                         <div style="text-align:left; color:gray">Password</div> 
-                                        <input class="InputDefault" type="password" value="karan" maxlength="100">
+                                        <input class="InputDefault ValidInputField" type="password" value="karan" maxlength="100">
                                         </div> --%>
 
                                         <div class="container-fluid"></div>
@@ -208,23 +245,23 @@
 
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">Company Address</div>
-                                            <input class="InputDefault" type="text" value="CG" maxlength="100">
+                                            <input class="InputDefault ValidInputField UserCompanyAddress" type="text" placeholder="Company Address" maxlength="100">
                                         </div>
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">City</div>
-                                            <input class="InputDefault" type="text" value="New Delhi" maxlength="100">
+                                            <input class="InputDefault ValidInputField UserCompanyCity" type="text" placeholder="City" maxlength="100">
                                         </div>
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">State</div>
-                                            <input class="InputDefault" type="text" value="Delhi" maxlength="100">
+                                            <input class="InputDefault ValidInputField UserCompanyState" type="text" placeholder="State" maxlength="100">
                                         </div>
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">Country</div>
-                                            <input class="InputDefault" type="text" value="India" maxlength="100">
+                                            <input class="InputDefault ValidInputField UserCompanyCountry" type="text" placeholder="Country" maxlength="100">
                                         </div>
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">Company Phone</div>
-                                            <input class="InputDefault" type="number" value="1234567898" maxlength="10">
+                                            <input class="InputDefault ValidInputField UserCompanyPhone ValidateContactLength" type="number" placeholder="Company Phone" maxlength="10">
                                         </div>
 
                                         <div class="container-fluid"></div>
@@ -233,7 +270,7 @@
 
                                     <div>
                                         <br><br>
-                                        <button class="DefaultButton UpdateProfile" style="width:200px">Update</button>
+                                        <button class="DefaultButton UpdateProfile" onclick="SubmitFunction()" style="width:200px">Update</button>
                                     </div>
 
                                     <div class="container-fluid"></div>
