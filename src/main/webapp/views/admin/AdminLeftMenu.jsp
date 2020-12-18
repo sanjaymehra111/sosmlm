@@ -27,14 +27,14 @@
           <%-- <li><a href=''>Manage Bank</a></li> --%>
           <%-- <li><a href=''>Manage Account</a></li> --%>
           <%-- <li><a href=''>Manage Kit</a></li> --%>
-          <li><a href='AdminManageLocation'>Manage Locations</a></li>
+          <li><a href='AdminManageAdvertisement'>Advertisement</a></li>
+          <li><a href='AdminManageLocation'>Locations</a></li>
           <%-- <li><a href='AdminManageCountry'>Manage Country</a></li>
           <li><a href='AdminManageState'>Manage State</a></li>
           <li><a href='AdminManageCity'>Manage City</a></li>
           <li><a href='AdminManageDistrict'>Manage District</a></li> --%>
           <%-- <li><a href=''>Task Manager</a></li> --%>
-          <li><a href='AdminManageBanner'>Manage Banner</a></li>
-          <li><a href='AdminManageAdvertisement'>Advertisement</a></li>
+          <li><a href='AdminManageBanner'>Banner</a></li>
         </ul>
       </li>
       

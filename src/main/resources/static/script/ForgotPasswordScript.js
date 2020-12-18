@@ -18,6 +18,7 @@ $(function () {
 function SendOtpFunction() {
     UserContact = $(".UserContact").val();
     if (UserContact.length != 10) {
+        $(".UserContact").focus();
         $(".UserContact").addClass("InputFieldError");
     }
     else {

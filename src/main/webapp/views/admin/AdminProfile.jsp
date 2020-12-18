@@ -58,16 +58,9 @@
             }
         }
 
-        $(".ValidInputField").on("keyup", function(event){
-            if(event.which == 13)
-                SubmitFunction();
-        })// Press Enter
-
     })
 
     function SubmitFunction(){
-
-
         var UserEmail = $(".UserEmail").val();
         var UserHostEmail = $(".UserHostEmail").val();
         var UserSenderEmail = $(".UserSenderEmail").val();

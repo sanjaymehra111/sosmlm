@@ -17,7 +17,81 @@
 
     <!-- Embed Button CSS -->
     <link rel="stylesheet" href="/style/joinMemberStyle.css">
-    
+    <link rel="stylesheet" href="/style/layoutStyle.css">
+
+    <!-- Embed Header Script -->
+    <script src="/script/ValidationScript.js"></script>
+
+    <style>
+    .ShowSpinner{
+        font-size: 16px;
+        position: absolute;
+        right: 50px;
+        color: #227491;
+        font-weight: bold;
+        margin-top: 21px;
+        display:none;
+    }
+    </style>
+
+
+
+    <Script>
+
+        function GetSponsorDetails(){
+            var SponsorId = $(".SponsorId").val();
+            if(SponsorId){
+                $(".SponsorName").val("ADMIN"+SponsorId.toUpperCase());
+                $(".ShowSpinner").show(200);
+            }
+            else{
+                $(".SponsorName").val("");
+                $(".ShowSpinner").hide(200);
+            }
+        }
+        
+        var UserGender="male";
+        
+        $(function(){
+            $(".UserGender").click(function(){
+                UserGender = $(this).val();
+            })
+        })
+        function SubmitFunction(){
+            var SponsorId = $(".SponsorId").val();
+            var SponsorName = $(".SponsorName").val();
+            var UserFirstName = $(".UserFirstName").val();
+            var UserLastName = $(".UserLastName").val();
+            //var UserGender = $(".UserGender").val();
+            var UserContact = $(".UserContact").val();
+            var UserEmail = $(".UserEmail").val();
+            var UserPan = $(".UserPan").val();
+            var UserPassword = $(".UserPassword").val();
+            var UserRePassword = $(".UserRePassword").val();
+            
+            //************* Add Multiple image Data To Ajax ********//
+
+            var returns = ValidateInputField();
+            if(returns){
+                if(UserContact.length != 10){
+                    $(".UserContact").addClass("InputFieldError");
+                    $(".UserContact").focus(); 
+                }
+                else if(UserPassword != UserRePassword){
+                    $(".UserPassword, .UserRePassword").addClass("InputFieldError");
+                    $(".UserPassword").focus();
+                }
+                else{
+                    $(".InputFieldError").removeClass("InputFieldError");
+                    alert("Updated", 'suc')
+                }
+            }
+        }; // SubmitFunction Close 
+
+
+    </script>
+
+
 
 </head>
 
@@ -38,38 +112,52 @@
                     <br><br>
                     <div style="text-align: left;">
                         <div>Sponsor ID *</div>
-                            <input class="InputType" type="text" maxlength="10">
+                            <input class="InputType ValidInputField SponsorId" type="text" maxlength="100" placeholder="Sponsor ID" onkeyup="GetSponsorDetails()">
                             <br><br>
-                        <div>Sponsor Name *</div>
-                            <input class="InputType" type="text">
+                        <div>Sponsor Naame *</div>
+                            <i class="fa fa-spinner fa-pulse ShowSpinner"></i>
+                            <input class="InputType SponsorName" type="text" readonly style="cursor:not-allowed" placeholder="Sponsor Name">
                             <br><br>
                         <div>First Name *</div>
-                            <input class="InputType" type="text" maxlength="50">
+                            <input class="InputType ValidInputField UserFirstName" type="text" maxlength="50" placeholder="First Name">
                             <br><br>
                         <div>Last Name *</div>
-                            <input class="InputType" type="text" maxlength="50">
+                            <input class="InputType ValidInputField UserLastName" type="text" maxlength="50" placeholder="Last Name">
                             <br><br>
                         <div>Select Gender *</div>
-                            Male &nbsp; <input name="Gender" class="RadioButton" type="radio"> &nbsp;&nbsp;&nbsp;&nbsp;
-                            Female &nbsp; <input name="Gender" class="RadioButton" type="radio">
+                            <label style="cursor:pointer">
+                                <span>Male &nbsp;  </span>
+                                <input name="Gender" value="male" class="RadioButton UserGender" checked type="radio"> &nbsp;&nbsp;&nbsp;&nbsp;
+                            </label>
+
+                            <label style="cursor:pointer">
+                                <span>Female &nbsp; </span>
+                                <input name="Gender" value="female" class="RadioButton UserGender" type="radio"> &nbsp;&nbsp;&nbsp;&nbsp;
+                            </label>
+                            
+                            <label style="cursor:pointer">
+                                <span>Other &nbsp; </span>
+                                <input name="Gender" value="other" class="RadioButton UserGender" type="radio">
+                            </label>
+                            
                             <br><br>
                         <div>Contact *</div>
-                            <input class="InputType" type="number">
+                            <input class="InputType ValidInputField ValidateContactLength UserContact" type="number" placeholder="Contact No.">
                             <br><br>
                         <div>Email ID *</div>
-                            <input class="InputType" type="text" maxlength="100">
+                            <input class="InputType ValidInputField UserEmail" type="text" maxlength="100" placeholder="Email Id">
                             <br><br>
                         <div>PAN No*</div>
-                            <input class="InputType" type="number">
+                            <input class="InputType ValidInputField UserPan" type="number" placeholder="PAN No.">
                             <br><br>
                         <div>Password *</div>
-                            <input class="InputType" type="password" maxlength="50">
+                            <input class="InputType ValidInputField UserPassword" type="password" maxlength="50" placeholder="Password">
                             <br><br>
                         <div>Re-Password *</div>
-                            <input class="InputType" type="password" maxlength="50">
+                            <input class="InputType ValidInputField UserRePassword" type="password" maxlength="50" placeholder="Re Password">
                             <br><br><br>
 
-                        <button class="DefaultButton">Submit</button>
+                        <button onclick="SubmitFunction()" class="DefaultButton">Submit</button>
                         <br><br>
 
                         </div>

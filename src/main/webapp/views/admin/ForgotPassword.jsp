@@ -1,5 +1,5 @@
 <!-- Embed Script -->
-<script src="/script/ForgotOtpScript.js"></script>
+<script src="/script/ForgotPasswordScript.js"></script>
 
 <div class="section2">
     <div class="ForgetPassword" align='center'>
@@ -26,7 +26,7 @@
                             <input type="number" class="inputField UserForgotInputField NoSpaceFiel ForgotPasswordOtp ValidateOtpLength" placeholder="Enter OTP"><br><br>
                             <input type="password" class="inputField UserForgotInputField NoSpaceFiel ForgotPassword" placeholder="New Password"><br><br>
                             <input type="password" class="inputField UserForgotInputField NoSpaceFiel ForgotRePassword" placeholder="Re Password"><br><br>
-                            <button style="width:150px" onclick="ForgotPasswordFunction()" class="DefaultButton ForgotPasswordFunction">Confirm</button> &nbsp;
+                            <button style="width:120px" onclick="ForgotPasswordFunction()" class="DefaultButton ForgotPasswordFunction">Confirm</button> &nbsp;
                             <button style="width:120px" onclick="SendOtpFunction()" class="DefaultButton">ReSend OTP</button><br><br><br>
                         </div>
 

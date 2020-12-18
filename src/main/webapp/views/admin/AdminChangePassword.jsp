@@ -34,13 +34,13 @@
 
         $(".ValidInputField").on("keyup", function(event){
             if(event.which == 13)
-                ChangePasswordFunction();
+                SubmitFunction();
         })// Press Enter
 
     })
 
 
-     function ChangePasswordFunction(){
+     function SubmitFunction(){
         
         var oldPwd = $(".OldPassword").val();
         var newPwd = $(".NewPassword").val();
@@ -132,7 +132,7 @@
 
                                     <div>
                                         <br><br>
-                                        <button class="DefaultButton changePassword" onclick="ChangePasswordFunction()" style="width:200px">Update</button>
+                                        <button class="DefaultButton changePassword" onclick="SubmitFunction()" style="width:200px">Update</button>
                                     </div>
 
                                     <div class="container-fluid"></div>

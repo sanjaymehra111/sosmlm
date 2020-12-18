@@ -17,21 +17,15 @@
 
 <!-- Embed Header CSS -->
 <link rel="stylesheet" href="/style/adminHeader.css">
-
-<!-- Embed DataTable CSS -->
 <link rel="stylesheet" href="/style/dataTable.css">
-
-<!-- Embed Button CSS -->
 <link rel="stylesheet" href="/style/buttonStyle.css">
-
-<!-- Embed Input CSS -->
 <link rel="stylesheet" href="/style/inputStyle.css">
-
-<!-- Embed Layout CSS -->
 <link rel="stylesheet" href="/style/layoutStyle.css">
 
 <!-- Embed Header Script -->
 <script src="/script/adminHeader.js"></script>
+<script src="/script/ValidationScript.js"></script>
+
 
 <!-- For Search Table -->
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
@@ -40,6 +34,9 @@
 
 
 <style>
+.InputDefault{
+    text-align:left;
+}
 .ql-toolbar{
 width:97%!important;
 background:white;
@@ -59,68 +56,77 @@ background:white;
 
 <script>
 
-$(function () {
-  $(".TopPageNamePre").html('Our')
-  $(".TopPageNamePost").html("Location's")
+    $(function () {
+        $(".TopPageNamePre").html('Our')
+        $(".TopPageNamePost").html("Location's")
 
+        $('#example thead tr').clone(true).appendTo( '#example thead' );
+            $('#example thead tr:eq(1) th').each(  function (i) {
+                var title = $(this).text();
+                $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
 
-  $(".AddAnnouncement").click(function(){
-    alert('Updated');
-  })
+                $( 'input', this ).on( 'keyup change', function () {
+                    if ( table.column(i).search() !== this.value ) {
+                        table
+                            .column(i)
+                            .search( this.value )
+                            .draw();
+                    }
+                } );
 
-
-
-$('#example thead tr').clone(true).appendTo( '#example thead' );
-    $('#example thead tr:eq(1) th').each(  function (i) {
-        var title = $(this).text();
-        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
-
-        $( 'input', this ).on( 'keyup change', function () {
-            if ( table.column(i).search() !== this.value ) {
-                table
-                    .column(i)
-                    .search( this.value )
-                    .draw();
-            }
+                $('#fini, #ffin').change( function() {
+                    table.draw();
+                } );
         } );
 
-        $('#fini, #ffin').change( function() {
-            table.draw();
-        } );
-} );
-
-var table = $("#example").DataTable({
-    aaSorting: [],
-    responsive: true,
-    orderCellsTop: true,
-    fixedHeader: true,
-    "pageLength": 5,
-    "bLengthChange": false, // page length
-    "bFilter": true, // search bar
+        var table = $("#example").DataTable({
+            aaSorting: [],
+            responsive: true,
+            orderCellsTop: true,
+            fixedHeader: true,
+            "pageLength": 5,
+            "bLengthChange": false, // page length
+            "bFilter": true, // search bar
 
 
-    columnDefs: [
-        {
-            responsivePriority: 1,
-            targets: 0
-        },
-        {
-            responsivePriority: 2,
-            targets: -1
+            columnDefs: [
+                {
+                    responsivePriority: 1,
+                    targets: 0
+                },
+                {
+                    responsivePriority: 2,
+                    targets: -1
+                }
+            ]
+        });
+
+        $(".dataTables_filter input")
+            .attr("placeholder", "Search here...")
+            .css({
+                width: "300px",
+                display: "inline-block"
+            });
+        $("#example").wrap("<div class='service_provider_details' style='overflow:scroll'></div>");
+
+    })
+
+
+    function SubmitFunction(){
+
+        var LocationCountry = $(".LocationCountry").val();
+        var LocationState = $(".LocationState").val();
+        var LocationCity = $(".LocationCity").val();
+        var LocationDistrict = $(".LocationDistrict").val();
+        
+        var returns = ValidateInputField();
+        
+        if(returns){
+            $(".InputFieldError").removeClass("InputFieldError");
+            alert("Updated", 'suc')
         }
-    ]
-});
+    }; // SubmitFunction Close 
 
-$(".dataTables_filter input")
-    .attr("placeholder", "Search here...")
-    .css({
-        width: "300px",
-        display: "inline-block"
-    });
-$("#example").wrap("<div class='service_provider_details' style='overflow:scroll'></div>");
-
-
-})
 
 </script>
 
@@ -168,20 +174,20 @@ style="background-color:#d8d3d3!important; color:gray!important; padding:2px!imp
 
 <div class="col-md-3"><br>
     <div style="text-align:left; color:gray">Country</div>
-    <input class="InputDefault" type="text" maxlength="100" placeholder="Country">
+    <input class="InputDefault LocationCountry ValidInputField" type="text" maxlength="100" placeholder="Country">
 </div>
 <div class="col-md-3"><br>
     <div style="text-align:left; color:gray">State</div>
-    <input class="InputDefault" type="text" maxlength="100" placeholder="State">
+    <input class="InputDefault LocationState ValidInputField" type="text" maxlength="100" placeholder="State">
 </div>
 <div class="col-md-3"><br>
     <div style="text-align:left; color:gray">City</div>
-    <input class="InputDefault" type="text" maxlength="100" placeholder="City">
+    <input class="InputDefault LocationCity ValidInputField" type="text" maxlength="100" placeholder="City">
 </div>
 
 <div class="col-md-3"><br>
     <div style="text-align:left; color:gray">District</div>
-    <input class="InputDefault" type="text" maxlength="100" placeholder="District">
+    <input class="InputDefault LocationDistrict" type="text" maxlength="100" placeholder="District">
 </div>
 
 </div>
@@ -193,7 +199,7 @@ style="background-color:#d8d3d3!important; color:gray!important; padding:2px!imp
 
 <div align="center">
 <br><br>
-<button class="DefaultButton AddAnnouncement" style="width:200px">Update</button>
+<button class="DefaultButton" onclick="SubmitFunction()" style="width:200px">Update</button>
 </div>
 
 <br> 

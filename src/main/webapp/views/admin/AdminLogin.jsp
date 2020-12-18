@@ -45,7 +45,7 @@
         </div>
 
 
-    <jsp:include page="ForgotOtp.jsp" />
+    <jsp:include page="ForgotPassword.jsp" />
 
     </div>
 </body>

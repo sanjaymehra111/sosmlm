@@ -17,20 +17,13 @@
 
 <!-- Embed Header CSS -->
 <link rel="stylesheet" href="/style/adminHeader.css">
-
-<!-- Embed DataTable CSS -->
 <link rel="stylesheet" href="/style/dataTable.css">
-
-<!-- Embed Button CSS -->
 <link rel="stylesheet" href="/style/buttonStyle.css">
-
-<!-- Embed Input CSS -->
 <link rel="stylesheet" href="/style/inputStyle.css">
-
-<!-- Embed Layout CSS -->
 <link rel="stylesheet" href="/style/layoutStyle.css">
 
 <!-- Embed Header Script -->
+<script src="/script/ValidationScript.js"></script>
 <script src="/script/adminHeader.js"></script>
 
 <!-- For Search Table -->
@@ -131,6 +124,25 @@ $(".SelectFile").on("change", function(){
 
 })
 
+
+    function SubmitFunction(){
+        var UserEmail = $(".SelectPage").val();
+        var UserProfile = $(".SelectFile")[0].files;
+
+        //************* Add Multiple image Data To Ajax ********//
+
+        // for(var i =0; i<img.length; i++){
+		// 	data.append("file",$(".image_button")[0].files[i]);
+		// }
+
+        var returns = ValidateInputField();
+        if(returns){
+            $(".InputFieldError").removeClass("InputFieldError");
+            alert("Updated", 'suc')
+        }
+    }; // SubmitFunction Close 
+
+
 </script>
 
 
@@ -180,13 +192,13 @@ style="background-color:#d8d3d3!important; color:gray!important; padding:2px!imp
 <div class="col-md-4"><br>
     <div style="text-align:left; color:gray">Upload File</div>
         <i class="fa fa-upload iconStyle UploadFile" style="cursor:pointer"></i>
-        <input class="InputDefault UploadFile ShowFileName" type="text" placeholder="Select File" readonly style="cursor:pointer">
+        <input class="InputDefault UploadFile ShowFileName ValidInputField" type="text" placeholder="Select File" readonly style="cursor:pointer">
         <input class="InputDefault SelectFile hidden" type="file">
 </div>
 
 <div class="col-md-4"><br>
     <div style="text-align:left; color:gray">Page</div>
-    <select class="InputDefault">
+    <select class="InputDefault SelectPage ValidInputField">
         <Option>Homepage</option>
         <Option>Profile</option>
         <Option>Advertisement</option>
@@ -202,7 +214,7 @@ style="background-color:#d8d3d3!important; color:gray!important; padding:2px!imp
 
 <div align="center">
 <br><br>
-<button class="DefaultButton AddAnnouncement" style="width:200px">Update</button>
+<button class="DefaultButton" onclick="SubmitFunction()" style="width:200px">Update</button>
 </div>
 
 <br> 

@@ -17,110 +17,131 @@
 
 <!-- Embed Header CSS -->
 <link rel="stylesheet" href="/style/adminHeader.css">
-
-<!-- Embed DataTable CSS -->
 <link rel="stylesheet" href="/style/dataTable.css">
-
-<!-- Embed Button CSS -->
 <link rel="stylesheet" href="/style/buttonStyle.css">
-
-<!-- Embed Input CSS -->
 <link rel="stylesheet" href="/style/inputStyle.css">
-
-<!-- Embed Layout CSS -->
 <link rel="stylesheet" href="/style/layoutStyle.css">
 
 <!-- Embed Header Script -->
 <script src="/script/adminHeader.js"></script>
+<script src="/script/ValidationScript.js"></script>
 
 <!-- For Search Table -->
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-    
+
 
 
 <style>
-.ql-toolbar{
-    width:97%!important;
-    background:white;
+.InputDefault {
+    text-align: left;
+    padding: 10px;
 }
-.dataTables_info{
-    color:black!important
+
+.ql-toolbar {
+    width: 97% !important;
+    background: white;
 }
-.dataTables_filter input {
-    display: block!important; 
+
+.dataTables_info {
+    color: black !important
 }
 
 .dataTables_filter input {
-    width: 100%!important;
+    display: block !important;
 }
-    
+
+.dataTables_filter input {
+    width: 100% !important;
+}
+.ShowAddImage{
+    width:100%
+}
 </style>
 
 <script>
 
 $(function () {
-  $(".TopPageNamePre").html('Our')
-  $(".TopPageNamePost").html("Advertisement")
+    $(".TopPageNamePre").html('Our')
+    $(".TopPageNamePost").html("Advertisement")
 
-
-  $(".AddAdvertisement").click(function(){
-    alert('Updated');
-  })
-
-
-
-$('#example thead tr').clone(true).appendTo( '#example thead' );
-    $('#example thead tr:eq(1) th').each(  function (i) {
+    $('#example thead tr').clone(true).appendTo('#example thead');
+    $('#example thead tr:eq(1) th').each(function (i) {
         var title = $(this).text();
-        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+        $(this).html('<input type="text" placeholder="Search ' + title + '" />');
 
-        $( 'input', this ).on( 'keyup change', function () {
-            if ( table.column(i).search() !== this.value ) {
+        $('input', this).on('keyup change', function () {
+            if (table.column(i).search() !== this.value) {
                 table
                     .column(i)
-                    .search( this.value )
+                    .search(this.value)
                     .draw();
             }
-        } );
+        });
 
-        $('#fini, #ffin').change( function() {
+        $('#fini, #ffin').change(function () {
             table.draw();
-        } );
-} );
-
-var table = $("#example").DataTable({
-    aaSorting: [],
-    responsive: true,
-    orderCellsTop: true,
-    fixedHeader: true,
-    "pageLength": 5,
-    "bLengthChange": false, // page length
-    "bFilter": true, // search bar
-
-
-    columnDefs: [
-        {
-            responsivePriority: 1,
-            targets: 0
-        },
-        {
-            responsivePriority: 2,
-            targets: -1
-        }
-    ]
-});
-
-$(".dataTables_filter input")
-    .attr("placeholder", "Search here...")
-    .css({
-        width: "300px",
-        display: "inline-block"
+        });
     });
-$("#example").wrap("<div class='service_provider_details' style='overflow:scroll'></div>");
+
+    var table = $("#example").DataTable({
+        aaSorting: [],
+        responsive: true,
+        orderCellsTop: true,
+        fixedHeader: true,
+        "pageLength": 5,
+        "bLengthChange": false, // page length
+        "bFilter": true, // search bar
+
+
+        columnDefs: [
+            {
+                responsivePriority: 1,
+                targets: 0
+            },
+            {
+                responsivePriority: 2,
+                targets: -1
+            }
+        ]
+    });
+
+    $(".dataTables_filter input")
+        .attr("placeholder", "Search here...")
+        .css({
+            width: "300px",
+            display: "inline-block"
+        });
+    $("#example").wrap("<div class='service_provider_details' style='overflow:scroll'></div>");
+
+    $(".DeleteData").click(function () {
+        var DataId = $(this).attr("id");
+        var resp = confirm("Confirm To Delete")
+        if (resp) {
+            alert("Deleted", "err")
+        }
+    })
+
 
 
 })
+
+
+
+function SubmitFunction() {
+    var AdvertisementCode = $(".AdvertisementCode").val();
+    var AdvertisementPage = $(".AdvertisementPage").val();
+
+    var returns = ValidateInputField();
+
+    if (returns) {
+        $(".InputFieldError").removeClass("InputFieldError");
+        alert("Updated", 'suc')
+    }
+}; // SubmitFunction Close 
+
+
+
 
 </script>
 
@@ -138,180 +159,201 @@ $("#example").wrap("<div class='service_provider_details' style='overflow:scroll
 
 <div class="Admin_Dashboard">
 
-<div class="section1">
+    <div class="section1">
 
 
-<div class="welcome">
-<div class="container-fluid">
-<div class="row">
-<div class="col-md-12">
-<div class="content SectionStyle">
+        <div class="welcome">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="content SectionStyle">
+
+                            <div align="center">
+
+                                <div class="welcome">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="content"
+                                                style="background-color:#d8d3d3!important; color:gray!important; padding:2px!important">
+                                                <h4> <i class="fa fa-pencil-square-o"></i> &nbsp; Add Advertisement</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br>
 
 
-<div align="center">
+                                <div style="margin-top:25px">
+                                    <div class="col-md-2"></div>
+                                    <div class="col-md-4"><br>
+                                        <div style="text-align:left; color:gray">Code</div>
+                                        <input class="InputDefault ValidInputField AdvertisementCode"
+                                            type="text" placeholder="Enter Code">
+                                    </div>
+                                    <div class="col-md-4"><br>
+                                        <div style="text-align:left; color:gray">Page</div>
+                                        <select class="InputDefault ValidInputField AdvertisementPage">
+                                            <Option>Homepage</option>
+                                            <Option>Profile</option>
+                                            <Option>Advertisement</option>
+                                        </select>
+                                    </div>
+                                </div>
 
-<div class="welcome">
-<div class="container-fluid">
-<div class="row">
-<div class="content"
-style="background-color:#d8d3d3!important; color:gray!important; padding:2px!important">
-<h4> <i class="fa fa-pencil-square-o"></i> &nbsp; Add Advertisement</h4>
-</div>
-</div>
-</div>
-</div>
+                                <div class="container-fluid"></div>
 
-<br> 
+                                <div align="center">
+                                    <br><br>
+                                    <button class="DefaultButton AddAdvertisement" onclick="SubmitFunction()" style="width:200px">Update</button>
+                                </div>
 
+                                <br>
 
-<div style="margin-top:25px">
-
-<div class="col-md-2"></div>
-
-<div class="col-md-4"><br>
-    <div style="text-align:left; color:gray">Code</div>
-        <input class="InputDefault" type="text" placeholder="Enter Code">
-</div>
-
-<div class="col-md-4"><br>
-    <div style="text-align:left; color:gray">Page</div>
-    <select class="InputDefault">
-        <Option>Homepage</option>
-        <Option>Profile</option>
-        <Option>Advertisement</option>
-    </select>
-</div>
-
-</div>
-
-
-
-
-<div class="container-fluid"></div>
-
-<div align="center">
-<br><br>
-<button class="DefaultButton AddAdvertisement" style="width:200px">Update</button>
-</div>
-
-<br> 
-
-<div class="welcome">
-<div class="container-fluid">
-<div class="row">
-<div class="content" style="background-color:#d8d3d3!important; color:gray!important; padding:2px!important">
-<h4> <i class="fa fa-street-view"></i> &nbsp; Our Advertisements</h4>
-</div>
-</div>
-</div>
-</div>
+                                <div class="welcome">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="content" style="background-color:#d8d3d3!important; color:gray!important; padding:2px!important">
+                                                <h4> <i class="fa fa-street-view"></i> &nbsp; Our Advertisements</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
 
 
 
 
-<br>
+                                <br>
 
-<table id="example" class="table table-hover responsive nowrap" style="width:100%; border:solid 1px lightgray" cellspacing="10">
+                                <table id="example" class="table table-hover responsive nowrap" style="width:100%; border:solid 1px lightgray" cellspacing="10">
 
-<thead>
-  <tr style="color: white; background-color: #6f6486;">
-      <th>Page</th>
-      <th style="text-align:center">Date</th>
-      <th style="text-align:center">Option</th>
-  </tr>
-</thead>
+                                    <thead>
+                                        <tr style="color: white; background-color: #6f6486;">
+                                            <th>Page</th>
+                                            <th style="text-align:center">Date</th>
+                                            <th style="text-align:center">Option</th>
+                                        </tr>
+                                    </thead>
 
-<tbody id="GetDetails"
-  style="font-size: 14px; border-collapse:separate; border-spacing:0 15px;">
-  <tr>
-      <td>New Delhi</td>
-      <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 102px;">
-        <i data-toggle="tooltip" title="View"class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i> &nbsp;
-        <i data-toggle="tooltip" title="Delete"class="fa fa-times ActionFontAwesomeDelete ActionFontAwesome"></i> 
-      </td>
-  </tr>
-  <tr>
-      <td>New India</td>
-      <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 102px;">
-        <i data-toggle="tooltip" title="View"class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i> &nbsp;
-        <i data-toggle="tooltip" title="Delete"class="fa fa-times ActionFontAwesomeDelete ActionFontAwesome"></i> 
-      </td>
-  </tr>
-  <tr>
-      <td>New India</td>
-      <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 102px;">
-        <i data-toggle="tooltip" title="View"class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i> &nbsp;
-        <i data-toggle="tooltip" title="Delete"class="fa fa-times ActionFontAwesomeDelete ActionFontAwesome"></i> 
-      </td>
-  </tr>
-  <tr>
-      <td>New India</td>
-      <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 102px;">
-        <i data-toggle="tooltip" title="View"class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i> &nbsp;
-        <i data-toggle="tooltip" title="Delete"class="fa fa-times ActionFontAwesomeDelete ActionFontAwesome"></i> 
-      </td>
-  </tr>
-  <tr>
-      <td>New India</td>
-      <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 102px;">
-        <i data-toggle="tooltip" title="View"class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i> &nbsp;
-        <i data-toggle="tooltip" title="Delete"class="fa fa-times ActionFontAwesomeDelete ActionFontAwesome"></i> 
-      </td>
-  </tr>
-  <tr>
-      <td>New India</td>
-      <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 102px;">
-        <i data-toggle="tooltip" title="View"class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i> &nbsp;
-        <i data-toggle="tooltip" title="Delete"class="fa fa-times ActionFontAwesomeDelete ActionFontAwesome"></i> 
-      </td>
-  </tr>
-  <tr>
-      <td>New India</td>
-      <td style="text-align:center;">10/12/2020</td>
-      <td style="text-align:center; min-width: 102px;">
-        <i data-toggle="tooltip" title="View"class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i> &nbsp;
-        <i data-toggle="tooltip" title="Delete"class="fa fa-times ActionFontAwesomeDelete ActionFontAwesome"></i> 
-      </td>
-  </tr>
+                                    <tbody id="GetDetails" style="font-size: 14px; border-collapse:separate; border-spacing:0 15px;">
+                                        <tr>
+                                            <td>New Delhi</td>
+                                            <td style="text-align:center;">10/12/2020</td>
+                                            <td style="text-align:center; min-width: 102px;">
+                                                <i data-toggle="modal"  title="View" data-target="#myAdvertisementModal" class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i>
+                                                &nbsp;
+                                                <i data-toggle="modal" title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>New India</td>
+                                            <td style="text-align:center;">10/12/2020</td>
+                                            <td style="text-align:center; min-width: 102px;">
+                                                <i data-toggle="modal"  title="View" data-target="#myAdvertisementModal" class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i>
+                                                &nbsp;
+                                                <i data-toggle="modal" title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>New India</td>
+                                            <td style="text-align:center;">10/12/2020</td>
+                                            <td style="text-align:center; min-width: 102px;">
+                                                <i data-toggle="modal"  title="View" data-target="#myAdvertisementModal" class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i>
+                                                &nbsp;
+                                                <i data-toggle="modal" title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>New India</td>
+                                            <td style="text-align:center;">10/12/2020</td>
+                                            <td style="text-align:center; min-width: 102px;">
+                                                <i data-toggle="modal"  title="View" data-target="#myAdvertisementModal" class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i>
+                                                &nbsp;
+                                                <i data-toggle="modal" title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>New India</td>
+                                            <td style="text-align:center;">10/12/2020</td>
+                                            <td style="text-align:center; min-width: 102px;">
+                                                <i data-toggle="modal"  title="View" data-target="#myAdvertisementModal" class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i>
+                                                &nbsp;
+                                                <i data-toggle="modal" title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>New India</td>
+                                            <td style="text-align:center;">10/12/2020</td>
+                                            <td style="text-align:center; min-width: 102px;">
+                                                <i data-toggle="modal"  title="View" data-target="#myAdvertisementModal" class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i>
+                                                &nbsp;
+                                                <i data-toggle="modal" title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>New India</td>
+                                            <td style="text-align:center;">10/12/2020</td>
+                                            <td style="text-align:center; min-width: 102px;">
+                                                <i data-toggle="modal"  title="View" data-target="#myAdvertisementModal" class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i>
+                                                &nbsp;
+                                                <i data-toggle="modal" title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
+                                            </td>
+                                        </tr>
 
-</tbody>
+                                    </tbody>
 
-</table>
-
-
-</div>
-<div>
-
-
-<div class="container-fluid"></div>
-</div>
-<br><br>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
+                                </table>
 
 
-</div>
+                            </div>
+                            <div>
 
 
+                            <div class="container-fluid"></div>
+                            </div>
+                            <br><br>
+                        </div>
 
-
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
 <div class="container-fluid"></div>
 <br><br><br><br>
 </section>
+
+
+<div class="ViewAdvertisementSection">
+
+<!-- Trigger the modal with a button -->
+<button type="button" data-target="#myAdvertisementModal" >Open Modal</button>
+
+<!-- Modal -->
+<div id="myAdvertisementModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Advertisement</h4>
+      </div>
+      <div class="modal-body">
+        <img class="ShowAddImage" src="/images/advertisement_mlm.png">
+      </div>
+      <%-- <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div> --%>
+    </div>
+
+  </div>
+</div>
+
+</div>
 
 </body>
 

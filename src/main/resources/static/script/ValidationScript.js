@@ -59,14 +59,23 @@ $(function(){
     $(".ValidateContactLength").keypress(function(){
         if($(this).val().length > 9)
             return false;
-    })
+    }) // contact length
     
     ///////////////////////////////////  OTP Length //////////////////////////////////////////////
     
     $(".ValidateOtpLength").keypress(function(){
         if($(this).val().length > 5)
             return false;
-    })
+    }) // otp length
+
+    ///////////////////////////////////  Press Enter //////////////////////////////////////////////
+
+    $(".ValidInputField").on("keyup", function(event){
+        if(event.which == 13)
+            SubmitFunction();
+    })// Press Enter
+
+
 })
 
 /////////////////////////////////// Function Close ///////////////////////////////////////////////
