@@ -17,18 +17,13 @@
 
 <!-- Embed Header CSS -->
 <link rel="stylesheet" href="/style/adminHeader.css">
-
-<!-- Embed Button CSS -->
 <link rel="stylesheet" href="/style/buttonStyle.css">
-
-<!-- Embed Input CSS -->
 <link rel="stylesheet" href="/style/inputStyle.css">
-
-<!-- Embed Layout CSS -->
 <link rel="stylesheet" href="/style/layoutStyle.css">
 
 <!-- Embed Header Script -->
 <script src="/script/adminHeader.js"></script>
+<script src="/script/ValidationScript.js"></script>
 
 <style>
 .InputDefault{
@@ -69,6 +64,52 @@
         })
 
     })
+
+
+
+    function SubmitFunction(){
+        var UserFirstName = $(".UserFirstName").val();
+        var UserLastName = $(".UserLastName").val();
+        var UserGender = $(".UserGender").val();
+        var UserContact = $(".UserContact").val();
+        var UserEmail = $(".UserEmail").val();
+        var UserFatherName = $(".UserFatherName").val();
+        var UserNomineeName = $(".UserNomineeName").val();
+        var UserNomineeRelation = $(".UserNomineeRelation").val();
+        var UserDob = $(".UserDob").val();
+        var UserAadhar = $(".UserAadhar").val();
+        var UserPan = $(".UserPan").val();
+
+        var UserCountry = $(".UserCountry").val();
+        var UserState = $(".UserState").val();
+        var UserDistrict = $(".UserDistrict").val();
+        var UserCity = $(".UserCity").val();
+        var UserAddress = $(".UserAddress").val();
+        var UserPinCode = $(".UserPinCode").val();
+
+        var UserBankName = $(".UserBankName").val();
+        var UserBankAddress = $(".UserBankAddress").val();
+        var UserIfscCode = $(".UserIfscCode").val();
+        var UserAccount = $(".UserAccount").val();
+        var UserHolderName = $(".UserHolderName").val();
+        
+        var UserProfile = $(".UserProfile")[0].files;
+
+
+        //************* Add Multiple image Data To Ajax ********//
+
+        // for(var i =0; i<img.length; i++){
+		// 	data.append("file",$(".image_button")[0].files[i]);
+		// }
+
+        var returns = ValidateInputField();
+
+        if(returns){
+             alert("Updated")
+        }
+    }; // SubmitFunction Close 
+
+
 
 </script>
 
@@ -131,7 +172,7 @@
 
                                         <div class="col-md-4"><br>
                                             <img class="userImage" src="/images/adminicon2.png">
-                                            <input type='file' class="hidden selectImage">
+                                            <input type='file' class="hidden selectImage UserProfile">
                                         </div>
 
                                         <div class="col-md-8"><br>
@@ -140,12 +181,12 @@
 
                                             <div class="col-md-6"><br>
                                                 <div style="text-align:left; color:gray">First Name</div>
-                                                <input class="InputDefault" type="text" maxlength="100" placeholder="First Name">
+                                                <input class="InputDefault UserFirstName" type="text" maxlength="100" placeholder="First Name">
                                             </div>
                                             
                                             <div class="col-md-6"><br>
                                                 <div style="text-align:left; color:gray">Last Name</div>
-                                                <input class="InputDefault" type="text" maxlength="100" placeholder="Last Name">
+                                                <input class="InputDefault UserLastName" type="text" maxlength="100" placeholder="Last Name">
                                             </div>
                                         </div>
 
@@ -157,38 +198,39 @@
 
                                             <div class="col-md-4"><br>
                                                 <div style="text-align:left; color:gray">Gender</div>
-                                                <select class="InputDefault">
-                                                    <option>Male</option>
-                                                    <option>Female</option>
+                                                <select class="InputDefault UserGender">
+                                                    <option value="male">Male</option>
+                                                    <option value="female">Female</option>
+                                                    <option value="other">Other</option>
                                                 </select>
                                             </div>
 
                                             <div class="col-md-4"><br>
                                                 <div style="text-align:left; color:gray">Contact</div>
-                                                <input class="InputDefault" type="number" maxlength="100" placeholder="Contact">
+                                                <input class="InputDefault UserContact" type="number" maxlength="100" placeholder="Contact">
                                             </div>
                                             
                                             <div class="col-md-4"><br>
                                                 <div style="text-align:left; color:gray">Email ID</div>
-                                                <input class="InputDefault" type="text" maxlength="100" placeholder="Email ID">
+                                                <input class="InputDefault UserEmail" type="text" maxlength="100" placeholder="Email ID">
                                             </div>
                                         </div>
 
                                         <div style="margin-top:25px">
 
                                             <div class="col-md-4"><br>
-                                                <div style="text-align:left; color:gray">Father / Husband Name</div>
-                                                <input class="InputDefault" type="text" maxlength="100" placeholder="Father / Husband Name">
+                                                <div style="text-align:left; color:gray">Father Name</div>
+                                                <input class="InputDefault UserFatherName" type="text" maxlength="100" placeholder="Father / Husband Name">
                                             </div>
                                             
                                             <div class="col-md-4"><br>
                                                 <div style="text-align:left; color:gray">Nominee Name</div>
-                                                <input class="InputDefault" type="text" maxlength="100" placeholder="Nominee Name">
+                                                <input class="InputDefault UserNomineeName" type="text" maxlength="100" placeholder="Nominee Name">
                                             </div>
 
                                             <div class="col-md-4"><br>
                                                 <div style="text-align:left; color:gray">Nominee Relation</div>
-                                                <input class="InputDefault" type="text" maxlength="100" placeholder="Nominee Relation">
+                                                <input class="InputDefault UserNomineeRelation" type="text" maxlength="100" placeholder="Nominee Relation">
                                             </div>
 
                                         </div>
@@ -196,17 +238,17 @@
                                         <div style="margin-top:25px">  
                                             <div class="col-md-4"><br>
                                                 <div style="text-align:left; color:gray">Date Of Birth</div>
-                                                <input class="InputDefault" type="date" maxlength="100" placeholder="Date Of Birth">
+                                                <input class="InputDefault UserDob" type="date" maxlength="100" placeholder="Date Of Birth">
                                             </div>
 
                                             <div class="col-md-4"><br>
                                                 <div style="text-align:left; color:gray">Aadhar Number</div>
-                                                <input class="InputDefault" type="number" placeholder="Aadhar Number">
+                                                <input class="InputDefault UserAadhar" type="number" placeholder="Aadhar Number">
                                             </div>
                                             
                                             <div class="col-md-4"><br>
                                                 <div style="text-align:left; color:gray">Pan Number</div>
-                                                <input class="InputDefault" type="text" maxlength="10" placeholder="Pan Number">
+                                                <input class="InputDefault UserPan" type="text" maxlength="10" placeholder="Pan Number">
                                             </div>
                                         </div>
 
@@ -232,39 +274,39 @@
 
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">Country</div>
-                                            <select class="InputDefault">
+                                            <select class="InputDefault UserCountry">
                                                 <option>abc</option>
                                                 <option>defg</option>
                                             </select>
                                         </div>  
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">State</div>
-                                            <select class="InputDefault">
+                                            <select class="InputDefault UserState">
                                                 <option>abc</option>
                                                 <option>defg</option>
                                             </select>
                                         </div>  
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">District</div>
-                                            <select class="InputDefault">
+                                            <select class="InputDefault UserDistrict">
                                                 <option>abc</option>
                                                 <option>defg</option>
                                             </select>
                                         </div>  
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">City</div>
-                                            <select class="InputDefault">
+                                            <select class="InputDefault UserCity">
                                                 <option>abc</option>
                                                 <option>defg</option>
                                             </select>
                                         </div>  
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">Address</div>
-                                            <input class="InputDefault" type="text" maxlength="1000" placeholder="Address">
+                                            <input class="InputDefault UserAddress" type="text" maxlength="1000" placeholder="Address">
                                         </div>
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">Pin Code</div>
-                                            <input class="InputDefault" type="number" maxlength="6" placeholder="Pin Code">
+                                            <input class="InputDefault UserPinCode" type="number" maxlength="6" placeholder="Pin Code">
                                         </div>
                                         
                                         <div class="container-fluid"></div>
@@ -290,27 +332,27 @@
 
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">Bank Name</div>
-                                            <input class="InputDefault" type="text" maxlength="100" placeholder="Bank Name">
+                                            <input class="InputDefault UserBankName" type="text" maxlength="100" placeholder="Bank Name">
                                         </div>
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">Bank Address</div>
-                                            <input class="InputDefault" type="text" maxlength="100" placeholder="Bank Address">
+                                            <input class="InputDefault UserBankAddress" type="text" maxlength="100" placeholder="Bank Address">
                                         </div>
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">IFSC Code</div>
-                                            <input class="InputDefault" type="text" maxlength="100" placeholder="IFSC Code">
+                                            <input class="InputDefault UserIfscCode" type="text" maxlength="100" placeholder="IFSC Code">
                                         </div>
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">Account Number</div>
-                                            <input class="InputDefault" type="text" maxlength="100" placeholder="Account Number">
+                                            <input class="InputDefault UserAccount" type="text" maxlength="100" placeholder="Account Number">
                                         </div>
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">A/C Holder Name</div>
-                                            <input class="InputDefault" type="text" maxlength="10" placeholder="A/C Holder Name">
+                                            <input class="InputDefault UserHolderName" type="text" maxlength="10" placeholder="A/C Holder Name">
                                         </div>
                                         <div class="col-md-4"><br>
                                             <div style="text-align:left; color:gray">PAN Number</div>
-                                            <input class="InputDefault" type="text" maxlength="100" placeholder="PAN NUmber">
+                                            <input class="InputDefault UserPan" type="text" maxlength="100" placeholder="PAN NUmber">
                                         </div>
                                         <div class="container-fluid"></div>
                                     </div>

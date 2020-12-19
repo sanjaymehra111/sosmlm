@@ -205,7 +205,7 @@ function SubmitFunction() {
 
                                 <div align="center">
                                     <br><br>
-                                    <button class="DefaultButton AddAdvertisement" onclick="SubmitFunction()" style="width:200px">Update</button>
+                                    <button class="DefaultButton AddAdvertisement" onclick="SubmitFunction()" style="width:200px">Add</button>
                                 </div>
 
                                 <br>
@@ -243,7 +243,7 @@ function SubmitFunction() {
                                             <td style="text-align:center; min-width: 102px;">
                                                 <i data-toggle="modal"  title="View" data-target="#myAdvertisementModal" class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i>
                                                 &nbsp;
-                                                <i data-toggle="modal" title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
+                                                <i title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
                                             </td>
                                         </tr>
                                         <tr>
@@ -252,7 +252,7 @@ function SubmitFunction() {
                                             <td style="text-align:center; min-width: 102px;">
                                                 <i data-toggle="modal"  title="View" data-target="#myAdvertisementModal" class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i>
                                                 &nbsp;
-                                                <i data-toggle="modal" title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
+                                                <i title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
                                             </td>
                                         </tr>
                                         <tr>
@@ -261,7 +261,7 @@ function SubmitFunction() {
                                             <td style="text-align:center; min-width: 102px;">
                                                 <i data-toggle="modal"  title="View" data-target="#myAdvertisementModal" class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i>
                                                 &nbsp;
-                                                <i data-toggle="modal" title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
+                                                <i title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
                                             </td>
                                         </tr>
                                         <tr>
@@ -270,7 +270,7 @@ function SubmitFunction() {
                                             <td style="text-align:center; min-width: 102px;">
                                                 <i data-toggle="modal"  title="View" data-target="#myAdvertisementModal" class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i>
                                                 &nbsp;
-                                                <i data-toggle="modal" title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
+                                                <i title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
                                             </td>
                                         </tr>
                                         <tr>
@@ -279,7 +279,7 @@ function SubmitFunction() {
                                             <td style="text-align:center; min-width: 102px;">
                                                 <i data-toggle="modal"  title="View" data-target="#myAdvertisementModal" class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i>
                                                 &nbsp;
-                                                <i data-toggle="modal" title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
+                                                <i title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
                                             </td>
                                         </tr>
                                         <tr>
@@ -288,7 +288,7 @@ function SubmitFunction() {
                                             <td style="text-align:center; min-width: 102px;">
                                                 <i data-toggle="modal"  title="View" data-target="#myAdvertisementModal" class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i>
                                                 &nbsp;
-                                                <i data-toggle="modal" title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
+                                                <i title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
                                             </td>
                                         </tr>
                                         <tr>
@@ -297,7 +297,7 @@ function SubmitFunction() {
                                             <td style="text-align:center; min-width: 102px;">
                                                 <i data-toggle="modal"  title="View" data-target="#myAdvertisementModal" class="fa fa-eye ActionFontAwesomeView ActionFontAwesome"></i>
                                                 &nbsp;
-                                                <i data-toggle="modal" title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
+                                                <i title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
                                             </td>
                                         </tr>
 
@@ -329,29 +329,29 @@ function SubmitFunction() {
 
 <div class="ViewAdvertisementSection">
 
-<!-- Trigger the modal with a button -->
-<button type="button" data-target="#myAdvertisementModal" >Open Modal</button>
+<%-- <!-- Trigger the modal with a button -->
+<button type="button" data-target="#myAdvertisementModal" >Open Modal</button> --%>
 
 <!-- Modal -->
-<div id="myAdvertisementModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+    <div id="myAdvertisementModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Advertisement</h4>
-      </div>
-      <div class="modal-body">
-        <img class="ShowAddImage" src="/images/advertisement_mlm.png">
-      </div>
-      <%-- <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div> --%>
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Advertisement</h4>
+        </div>
+        <div class="modal-body">
+            <img class="ShowAddImage" src="/images/advertisement_mlm.png">
+        </div>
+        <%-- <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div> --%>
+        </div>
+
     </div>
-
-  </div>
-</div>
+    </div>
 
 </div>
 

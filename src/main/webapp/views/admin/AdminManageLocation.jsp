@@ -56,6 +56,9 @@ background:white;
 
 <script>
 
+var InsertType = "insert";
+var UpdateId;
+
     $(function () {
         $(".TopPageNamePre").html('Our')
         $(".TopPageNamePost").html("Location's")
@@ -109,7 +112,34 @@ background:white;
             });
         $("#example").wrap("<div class='service_provider_details' style='overflow:scroll'></div>");
 
-    })
+        
+        $(".DeleteData").click(function () {
+            var DataId = $(this).attr("id");
+            var resp = confirm("Confirm To Delete")
+            if (resp) {
+                alert("Deleted", "err")
+            }
+        })
+
+        $(".EditData").click(function () {
+            $(".CreateButton").html("Update")
+            InsertType = "update";
+            UpdateId = $(this).attr("id");
+            var country = $(this).attr("country");
+            var state = $(this).attr("state");
+            var city = $(this).attr("city");
+            var district = $(this).attr("district");
+           
+            $(".LocationCountry").val(country);
+            $(".LocationState").val(state);
+            $(".LocationCity").val(city);
+            $(".LocationDistrict").val(district);
+            $(".LocationCountry").focus();
+            
+            document.body.scrollTop = 0;
+        })
+
+})
 
 
     function SubmitFunction(){
@@ -122,8 +152,15 @@ background:white;
         var returns = ValidateInputField();
         
         if(returns){
-            $(".InputFieldError").removeClass("InputFieldError");
-            alert("Updated", 'suc')
+            if(InsertType == "insert"){
+                $(".InputFieldError").removeClass("InputFieldError");
+                alert("Inserted", 'suc')
+            }
+            else{
+                $(".InputFieldError").removeClass("InputFieldError");
+                console.log(UpdateId);
+                alert("Updated")
+            }
         }
     }; // SubmitFunction Close 
 
@@ -199,7 +236,7 @@ style="background-color:#d8d3d3!important; color:gray!important; padding:2px!imp
 
 <div align="center">
 <br><br>
-<button class="DefaultButton" onclick="SubmitFunction()" style="width:200px">Update</button>
+<button class="DefaultButton CreateButton" onclick="SubmitFunction()" style="width:200px">Create</button>
 </div>
 
 <br> 
@@ -243,8 +280,8 @@ style="background-color:#d8d3d3!important; color:gray!important; padding:2px!imp
       <td>New Delhi</td>
       <td style="text-align:center;">10/12/2020</td>
       <td style="text-align:center; min-width: 102px;">
-        <i data-toggle="tooltip" title="Edit" class="fa fa-pencil-square-o ActionFontAwesomeEdit ActionFontAwesome"></i> &nbsp;
-        <i data-toggle="tooltip" title="Delete"class="fa fa-times ActionFontAwesomeDelete ActionFontAwesome"></i>
+        <i data-toggle="tooltip" title="Edit" id="1" country="India" state="Delhi" city="New Delhi" district="New Delhi" class="fa fa-pencil-square-o ActionFontAwesomeEdit EditData ActionFontAwesome"></i> &nbsp;
+        <i data-toggle="tooltip" title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
       </td>
   </tr>
   <tr>
@@ -254,8 +291,8 @@ style="background-color:#d8d3d3!important; color:gray!important; padding:2px!imp
       <td>New India</td>
       <td style="text-align:center;">10/12/2020</td>
       <td style="text-align:center; min-width: 102px;">
-        <i data-toggle="tooltip" title="Edit" class="fa fa-pencil-square-o ActionFontAwesomeEdit ActionFontAwesome"></i> &nbsp;
-        <i data-toggle="tooltip" title="Delete"class="fa fa-times ActionFontAwesomeDelete ActionFontAwesome"></i>
+        <i data-toggle="tooltip" title="Edit" id="1" country="India" state="Delhi" city="New Delhi" district="New Delhi" class="fa fa-pencil-square-o ActionFontAwesomeEdit EditData ActionFontAwesome"></i> &nbsp;
+        <i data-toggle="tooltip" title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
       </td>
   </tr>
   <tr>
@@ -265,8 +302,8 @@ style="background-color:#d8d3d3!important; color:gray!important; padding:2px!imp
       <td>New India</td>
       <td style="text-align:center;">10/12/2020</td>
       <td style="text-align:center; min-width: 102px;">
-        <i data-toggle="tooltip" title="Edit" class="fa fa-pencil-square-o ActionFontAwesomeEdit ActionFontAwesome"></i> &nbsp;
-        <i data-toggle="tooltip" title="Delete"class="fa fa-times ActionFontAwesomeDelete ActionFontAwesome"></i>
+        <i data-toggle="tooltip" title="Edit" id="1" country="India" state="Delhi" city="New Delhi" district="New Delhi" class="fa fa-pencil-square-o ActionFontAwesomeEdit EditData ActionFontAwesome"></i> &nbsp;
+        <i data-toggle="tooltip" title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
       </td>
   </tr>
   <tr>
@@ -276,8 +313,8 @@ style="background-color:#d8d3d3!important; color:gray!important; padding:2px!imp
       <td>New India</td>
       <td style="text-align:center;">10/12/2020</td>
       <td style="text-align:center; min-width: 102px;">
-        <i data-toggle="tooltip" title="Edit" class="fa fa-pencil-square-o ActionFontAwesomeEdit ActionFontAwesome"></i> &nbsp;
-        <i data-toggle="tooltip" title="Delete"class="fa fa-times ActionFontAwesomeDelete ActionFontAwesome"></i>
+        <i data-toggle="tooltip" title="Edit" id="1" country="India" state="Delhi" city="New Delhi" district="New Delhi" class="fa fa-pencil-square-o ActionFontAwesomeEdit EditData ActionFontAwesome"></i> &nbsp;
+        <i data-toggle="tooltip" title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
       </td>
   </tr>
   <tr>
@@ -287,8 +324,8 @@ style="background-color:#d8d3d3!important; color:gray!important; padding:2px!imp
       <td>New India</td>
       <td style="text-align:center;">10/12/2020</td>
       <td style="text-align:center; min-width: 102px;">
-        <i data-toggle="tooltip" title="Edit" class="fa fa-pencil-square-o ActionFontAwesomeEdit ActionFontAwesome"></i> &nbsp;
-        <i data-toggle="tooltip" title="Delete"class="fa fa-times ActionFontAwesomeDelete ActionFontAwesome"></i>
+        <i data-toggle="tooltip" title="Edit" id="1" country="India" state="Delhi" city="New Delhi" district="New Delhi" class="fa fa-pencil-square-o ActionFontAwesomeEdit EditData ActionFontAwesome"></i> &nbsp;
+        <i data-toggle="tooltip" title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
       </td>
   </tr>
   <tr>
@@ -298,8 +335,8 @@ style="background-color:#d8d3d3!important; color:gray!important; padding:2px!imp
       <td>New India</td>
       <td style="text-align:center;">10/12/2020</td>
       <td style="text-align:center; min-width: 102px;">
-        <i data-toggle="tooltip" title="Edit" class="fa fa-pencil-square-o ActionFontAwesomeEdit ActionFontAwesome"></i> &nbsp;
-        <i data-toggle="tooltip" title="Delete"class="fa fa-times ActionFontAwesomeDelete ActionFontAwesome"></i>
+        <i data-toggle="tooltip" title="Edit" id="1" country="India" state="Delhi" city="New Delhi" district="New Delhi" class="fa fa-pencil-square-o ActionFontAwesomeEdit EditData ActionFontAwesome"></i> &nbsp;
+        <i data-toggle="tooltip" title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
       </td>
   </tr>
   <tr>
@@ -309,8 +346,8 @@ style="background-color:#d8d3d3!important; color:gray!important; padding:2px!imp
       <td>New India</td>
       <td style="text-align:center;">10/12/2020</td>
       <td style="text-align:center; min-width: 102px;">
-        <i data-toggle="tooltip" title="Edit" class="fa fa-pencil-square-o ActionFontAwesomeEdit ActionFontAwesome"></i> &nbsp;
-        <i data-toggle="tooltip" title="Delete"class="fa fa-times ActionFontAwesomeDelete ActionFontAwesome"></i>
+        <i data-toggle="tooltip" title="Edit" id="1" country="India" state="Delhi" city="New Delhi" district="New Delhi" class="fa fa-pencil-square-o ActionFontAwesomeEdit EditData ActionFontAwesome"></i> &nbsp;
+        <i data-toggle="tooltip" title="Delete" class="fa fa-times ActionFontAwesomeDelete DeleteData ActionFontAwesome"></i>
       </td>
   </tr>
 

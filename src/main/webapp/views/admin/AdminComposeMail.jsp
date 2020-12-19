@@ -17,21 +17,15 @@
 
 <!-- Embed Header CSS -->
 <link rel="stylesheet" href="/style/adminHeader.css">
-
-<!-- Embed DataTable CSS -->
 <link rel="stylesheet" href="/style/dataTable.css">
-
-<!-- Embed Button CSS -->
 <link rel="stylesheet" href="/style/buttonStyle.css">
-
-<!-- Embed Input CSS -->
 <link rel="stylesheet" href="/style/inputStyle.css">
-
-<!-- Embed Layout CSS -->
 <link rel="stylesheet" href="/style/layoutStyle.css">
 
 <!-- Embed Header Script -->
 <script src="/script/adminHeader.js"></script>
+<script src="/script/ValidationScript.js"></script>
+
 
 <!-- For Search Table -->
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
@@ -53,7 +47,6 @@
     font-size:12px;
     cursor:pointer;
 }
-
 </style>
 
 <script>
@@ -61,14 +54,30 @@
 $(function () {
   $(".TopPageNamePre").html('Compose')
   $(".TopPageNamePost").html("Mail")
-
-
-  $(".ComposeMail").click(function(){
-    alert('Mail Sent');
-  })
-
-
 })
+
+function SubmitFunction(){
+    var MailTo = $(".MailTo").val();
+    var MailSubject = $(".MailSubject").val();
+    var MailType = $(".MailType").val();
+    var MailMessage = $(".MailMessage").val();
+    var MailToMember = $(".MailToMember").val();
+    var AllMember = $(".MailToMember").prop("checked") ? "allMember" : "";
+
+    var returns = ValidateInputField();
+    
+    if(returns){
+        if(MailMessage.length == ""){
+            $(".MailMessage").addClass("InputFieldError");
+            return false;
+        }
+        else{
+            $(".InputFieldError").removeClass("InputFieldError");
+            alert("Updated")
+        }
+    }
+}; // SubmitFunction Close 
+
 
 </script>
 
@@ -116,35 +125,35 @@ style="background-color:#d8d3d3!important; color:gray!important; padding:2px!imp
 
 <div class="col-md-4"><br>
     <div style="text-align:left; color:gray">To</div>
-    <input class="InputDefault" type="text" maxlength="100" placeholder="Add a Tag">
+    <input class="InputDefault ValidInputField MailTo" type="text" maxlength="100" placeholder="Add a Tag">
 </div>
 
 <div class="col-md-4"><br>
     <div style="text-align:left; color:gray">Subject</div>
-    <input class="InputDefault" type="text" maxlength="100" placeholder="Subject">
+    <input class="InputDefault ValidInputField MailSubject" type="text" maxlength="100" placeholder="Subject">
 </div>
 
 
 <div class="col-md-4"><br>
     <div style="text-align:left; color:gray">Message Type</div>
-    <select class="InputDefault">
-        <option>Other</option>
-        <option>Joining</option>
-        <option>Greeting</option>
-        <option>Meeting</option>
-        <option>Withdraw</option>
+    <select class="InputDefault ValidInputField MailType">
+        <option value="">Other</option>
+        <option value="joining">Joining</option>
+        <option value="greeting">Greeting</option>
+        <option value="meeting">Meeting</option>
+        <option value="withdraw">Withdraw</option>
     </select>
 </div>
 
 <div class="col-md-12"><br>
     <div style="text-align:left; color:gray">Message</div>
-    <textarea class="InputDefault TextArea" maxlength="100"> Message </textarea>
+    <textarea class="InputDefault TextArea MailMessage" maxlength="100" placeholder="Enter Message"></textarea>
 </div>
 
 <div class="col-md-12" align="left" style="color:gray"><br>
 
 <label class="MemberLabel">
-    <input class="MemberCheck" type="checkbox"> <span>&nbsp; SEND TO ALL MEMBER</span>
+    <input class="MemberCheck MailToMember" type="checkbox"> <span>&nbsp; SEND TO ALL MEMBER</span>
 </label>
  
 </div>
@@ -160,7 +169,7 @@ style="background-color:#d8d3d3!important; color:gray!important; padding:2px!imp
 
 <div align="center">
 <br><br>
-<button class="DefaultButton ComposeMail" style="width:200px">Send</button>
+<button class="DefaultButton ComposeMail" onclick="SubmitFunction()" style="width:200px">Send</button>
 </div>
 
 </div>
